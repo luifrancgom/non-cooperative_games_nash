@@ -1,0 +1,49 @@
+$if(has-frontmatter)$
+\frontmatter
+$endif$
+$if(title)$
+\maketitle
+$if(abstract)$
+\begin{abstract}
+$abstract$
+\end{abstract}
+$endif$
+$endif$
+% ==========================================
+% Custom Nash Thesis Title Page
+% ==========================================
+\newgeometry{
+    top=2.5cm,
+    bottom=2.5cm,
+    left=3.5cm,
+    right=3.5cm,
+    centering
+}
+
+\begin{titlepage}
+    \begin{center}
+        \vspace*{2cm} 
+
+        \Large \textsc{A dissertation}
+        
+        \vspace{1.5cm}
+
+        \normalsize
+        Presented to the Faculty of Princeton University in Candidacy for the 
+        Degree of Doctor of Philosophy
+
+        \vfill 
+
+        Recommended for Acceptance by the Department of Mathematics
+        
+        \vspace{1cm}
+        
+        $if(date)$
+        $date$
+        $endif$
+        
+        \vspace*{1.5cm} 
+    \end{center}
+\end{titlepage}
+
+\restoregeometry

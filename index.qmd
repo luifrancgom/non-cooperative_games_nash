@@ -1,7 +1,24 @@
-# {.unnumbered .unlisted}
+# Abstract {.unnumbered .unlisted}
 
-Presented to the Faculty of Princeton University in Candidacy for the Degree of Doctor of Philosophy
+This paper introduces the concept of a non-cooperative game and develops methods for the mathematical analysis of such games. The games considered are n-person games represented by means of pure strategies and pay-off functions defined for the combinations of pure strategies.	
 
-Recommended for Acceptance by the Department of Mathematics
+The distinction between cooperative and non-cooperative games is unrelated to the mathematical description by means of pure strategies and pay-off functions of a game. Rather, it depends on the possibility or impossibility of coalitions, communication, and side-payments.
 
-May, 1950
+The concepts of an equilibrium point, a solution, a strong solution, a sub-solution, and values are introduced by mathematical definitions. And in later sections the interpretation of those concepts in non-cooperative games is discussed.
+
+The main mathematical result is the proof of the existence in any game of at least one equilibrium point. Other results concern the geometrical structure of the set of equilibrium points of a game with a solution, the geometry of sub-solutions, and the existence of a symmetrical equilibrium point in a symmetrical game.
+
+As an illustration of the possibilities for application a treatment of a simple three-man poker model is included.
+
+::: {.content-visible when-format="pdf"}
+```{=latex}
+\clearpage
+\begingroup
+  \renewcommand*\contentsname{Table of Contents}
+  \hypersetup{linkcolor=black}
+  \setcounter{tocdepth}{1}
+  \tableofcontents
+\endgroup
+\mainmatter
+```
+:::

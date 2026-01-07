@@ -7,6 +7,7 @@ book:
   title: "Non-Cooperative Games"
   author: "John Forbes Nash"
   date: "1950-05"
+  date-format: "MMMM, YYYY"
   downloads: [pdf]
   repo-url: https://github.com/luifrancgom/non-cooperative_games_nash/
   issue-url: https://github.com/luifrancgom/non-cooperative_games_nash/issues
@@ -14,7 +15,6 @@ book:
   reader-mode: true
   chapters:
     - index.qmd
-    - abstract.qmd
     - introduction.qmd
     # - formal_definitions_and_terminology.qmd
     # - existence_of_equilibrium_points.qmd
@@ -44,7 +44,9 @@ format:
     # format options
     pdf-engine: xelatex
     # table of contents
-    toc: true
+    # Trick to move the table of contents after the prefaces
+    # See https://github.com/orgs/quarto-dev/discussions/9839
+    toc: false
     # fonts
     fontsize: 11pt
     # colors
@@ -55,10 +57,22 @@ format:
     # layout
     documentclass: scrbook
     papersize: a4
+    geometry:
+      - top=2.5cm
+      - bottom=2.5cm
+      - inner=2.5cm
+      - outer=2.5cm
     indent: true
     # references
     link-citations: true
     link-bibliography: true
+    # rendering
+    template: partials/latex/template.tex
+    template-partials:
+      - partials/latex/title.tex
+      - partials/latex/before-body.tex
+    # keep-md: true
+    # keep-tex: true
 
 bibliography: references/non-cooperative_games.bib
 csl: references/apa_7ed.csl
