@@ -1,0 +1,13 @@
+# Applications
+
+The study of n-person games for which the accepted ethics of fair play imply non-cooperative playing is, of course, an obvious direction in which to apply this theory. And poker is the most obvious target. The analysis of a more realistic poker game than our very simple model should be quite an interesting affair.
+
+The complexity of the mathematical work needed for a complete investigation increases rather rapidly, however, with increasing complexity of the game; so that it seems that analysis of a game much more complex than the example given here would only be feasible using approximate computational methods.
+
+A less obvious type of application is the study of cooperative games. By a cooperative game we mean a situation involving a set of players, pure strategies, and pay-offs as usual; but with the assumption that the players can and will collaborate as they do in the von Neumann and Morgenstern theory. This means the players may communicate and form coalitions which will be enforced by an umpire. It is unnecessarily restrictive, however, to assume any transferability, or even comparability of the pay-offs \[which should be in utility units\] to different players. Any desired transferability can be put into the game itself instead of assuming it possible in the extra-game collaboration.
+
+The writer has developed a "dynamical" approach to the study of cooperative games based upon reduction to non-cooperative form. One proceeds by constructing a model of the pre-play negotiation so that the steps of negotiation become moves in a larger non-cooperative game \[which will have an infinity of pure strategies\] describing the total situation.
+
+This larger game is then treated in terms of the theory of this paper [extended to infinite games] and if values are obtained they are taken as the values of the cooperative game. Thus the problem analyzing a cooperative game becomes the problem of obtaining a suitable, and convincing, non-cooperative model for the negotiation.
+
+The writer has, by such a treatment, obtained values for all finite two person cooperative games, and some special n-person games.
