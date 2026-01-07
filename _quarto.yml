@@ -1,10 +1,17 @@
 project:
   type: book
+  output-dir: _book
 
 book:
+  # book
   title: "Non-Cooperative Games"
   author: "John Forbes Nash"
   date: "1950-05"
+  downloads: [pdf]
+  repo-url: https://github.com/luifrancgom/non-cooperative_games_nash/
+  issue-url: https://github.com/luifrancgom/non-cooperative_games_nash/issues
+  repo-actions: [edit, source, issue]
+  reader-mode: true
   chapters:
     - index.qmd
     - abstract.qmd
