@@ -8,6 +8,6 @@ A less obvious type of application is the study of cooperative games. By a coope
 
 The writer has developed a "dynamical" approach to the study of cooperative games based upon reduction to non-cooperative form. One proceeds by constructing a model of the pre-play negotiation so that the steps of negotiation become moves in a larger non-cooperative game \[which will have an infinity of pure strategies\] describing the total situation.
 
-This larger game is then treated in terms of the theory of this paper [extended to infinite games] and if values are obtained they are taken as the values of the cooperative game. Thus the problem analyzing a cooperative game becomes the problem of obtaining a suitable, and convincing, non-cooperative model for the negotiation.
+This larger game is then treated in terms of the theory of this paper \[extended to infinite games\] and if values are obtained they are taken as the values of the cooperative game. Thus the problem analyzing a cooperative game becomes the problem of obtaining a suitable, and convincing, non-cooperative model for the negotiation.
 
 The writer has, by such a treatment, obtained values for all finite two person cooperative games, and some special n-person games.
