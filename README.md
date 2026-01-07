@@ -1,2 +1,2 @@
-# Non-Cooperative Games (John Forbes Nash)
+# Non-Cooperative Games (John Forbes Nash Thesis)
 Pending
