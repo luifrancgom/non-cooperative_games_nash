@@ -19,7 +19,7 @@ book:
     # - motivation_and_interpretation.qmd
     # - applications.qmd
     - references.qmd
-    # - acknowledgements.qmd
+    - acknowledgements.qmd
 
 format:
   html:
