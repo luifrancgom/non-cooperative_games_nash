@@ -1,2 +1,2 @@
-# non-cooperative_games_nash
+# Non-Cooperative Games (John Forbes Nash)
 Pending
