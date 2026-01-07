@@ -15,7 +15,7 @@ book:
   chapters:
     - index.qmd
     - abstract.qmd
-    # - introduction.qmd
+    - introduction.qmd
     # - formal_definitions_and_terminology.qmd
     # - existence_of_equilibrium_points.qmd
     # - symmetries_of_games.qmd
@@ -30,9 +30,16 @@ book:
 
 format:
   html:
+    # table of contents
+    toc: true
+    toc-location: right
+    # rendering
+    embed-resources: false
+    # format options
     theme:
       - cosmo
-      - brand
+      - scss/custom.scss
+    html-math-method: mathjax
   pdf:
     # format options
     pdf-engine: xelatex

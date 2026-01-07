@@ -1,0 +1,13 @@
+# Introduction
+
+Von Neumann and Morgenstern have developed a very fruitful theory of two-person zero-sum games in their book [Theory of Games and Economic Behavior]{.underline} [See @von_neumann_theory_1944]. This books also contains a theory of n-person games of a type which we would call cooperative. This theory is based on an analysis of the interrelationships of the various coalitions which can be formed by the players of the game.
+
+Our theory, in contradistinction, is based on the [absence]{.underline} of coalitions in that it is assumed that each participant acts independently, without collaboration or communication with any of the others.
+
+The notion of an [equilibrium]{.underline} point is the basic ingredient in our theory. This notion yields a generalization of the concept of the solution of a two-person zero-sum game. It turns out that the set of equilibrium points of a two-person zero-sum game is simply the set of all pairs of opposing "good strategies".
+
+In the immediately following sections we shall define equilibrium points and prove that a finite non-cooperative game always has at least one equilibrium point. We shall also introduce the notions of solvability and strong solvability of a non-cooperative game and prove a theorem on the geometrical structure of the set of equilibrium points of a solvable game.
+
+As an example of the application of our theory we include a solution of a simplified three person poker game.
+
+The motivation and interpretation of the mathematical concepts employed in the theory are reserved for discussion on a special section of this paper.
