@@ -1,0 +1,53 @@
+project:
+  type: book
+
+book:
+  title: "Non-Cooperative Games"
+  author: "John Forbes Nash"
+  date: "1950-05"
+  chapters:
+    - index.qmd
+    - abstract.qmd
+    # - introduction.qmd
+    # - formal_definitions_and_terminology.qmd
+    # - existence_of_equilibrium_points.qmd
+    # - symmetries_of_games.qmd
+    # - solutions.qmd
+    # - geometrical_form_of_solutions.qmd
+    # - dominance_and_contradiction_methods.qmd
+    # - a_three-man_poker_game.qmd
+    # - motivation_and_interpretation.qmd
+    # - applications.qmd
+    - references.qmd
+    # - acknowledgements.qmd
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+  pdf:
+    # format options
+    pdf-engine: xelatex
+    # table of contents
+    toc: true
+    # fonts
+    fontsize: 11pt
+    # colors
+    linkcolor: blue
+    citecolor: blue
+    urlcolor: blue
+    colorlinks: true
+    # layout
+    documentclass: scrbook
+    papersize: a4
+    indent: true
+    # references
+    link-citations: true
+    link-bibliography: true
+
+bibliography: references/non-cooperative_games.bib
+csl: references/apa_7ed.csl
+
+engine: knitr
+editor: source
