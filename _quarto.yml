@@ -16,7 +16,7 @@ book:
   chapters:
     - index.qmd
     - introduction.qmd
-    # - formal_definitions_and_terminology.qmd
+    - formal_definitions_and_terminology.qmd
     # - existence_of_equilibrium_points.qmd
     # - symmetries_of_games.qmd
     # - solutions.qmd
@@ -66,6 +66,9 @@ format:
     # references
     link-citations: true
     link-bibliography: true
+    # includes
+    include-in-header: 
+      - file: partials/latex/header.tex
     # rendering
     template: partials/latex/template.tex
     template-partials:
