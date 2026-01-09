@@ -17,7 +17,7 @@ book:
     - index.qmd
     - introduction.qmd
     - formal_definitions_and_terminology.qmd
-    # - existence_of_equilibrium_points.qmd
+    - existence_of_equilibrium_points.qmd
     # - symmetries_of_games.qmd
     # - solutions.qmd
     # - geometrical_form_of_solutions.qmd
@@ -78,7 +78,7 @@ format:
     # keep-tex: true
 
 bibliography: references/non-cooperative_games.bib
-csl: references/apa_7ed.csl
+csl: references/ieee.csl
 
 
 # cross reference
