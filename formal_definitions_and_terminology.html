@@ -212,9 +212,9 @@ window.Quarto = {
 </header>
 
 
-<p>In this section we define the basic concepts of this paper and set up standard terminology and notation. Important definitions will be preceded by a subtitle indicating the concept defined. The non-cooperative idea will be implicit, rather than explicit, below.</p>
+<p>In this section we define the basic concepts of this paper and set up standard terminology and notation. Important definitions will be preceded by a subtitle indicating the concept defined<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. The non-cooperative idea will be implicit, rather than explicit, below.</p>
 <div id="def-finite-game" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2.1 (Finite Game)</strong></span> For us an <u>n-person game</u> will be a set of n <u>players</u>, or <u>positions</u>, each with an associated finite of <u>pure strategies</u>; and corresponding to each player, <span class="math inline">\(i\)</span>, a <u>pay-off function</u>, <span class="math inline">\(p_i\)</span>, which maps the set of all n-tuples of pure strategies into the real numberes. When we use the word <u>n-tuples</u> we shall always mean a set of n items, with each item associated with a different player.</p>
+<p><span class="theorem-title"><strong>Definition 2.1 (Finite Game)</strong></span> For us an <u>n-person game</u> will be a set of n <u>players</u>, or <u>positions</u>, each with an associated finite set of <u>pure strategies</u>; and corresponding to each player, <span class="math inline">\(i\)</span>, a <u>pay-off function</u>, <span class="math inline">\(p_i\)</span>, which maps the set of all n-tuples of pure strategies into the real numbers. When we use the term <u>n-tuple</u> we shall always mean a set of n items, with each item associated with a different player.</p>
 </div>
 <div id="def-mixed-strategy" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 2.2 (Mixed Strategy, <span class="math inline">\(s_i\)</span>)</strong></span> A <u>mixed strategy</u> of player <span class="math inline">\(i\)</span> will be a collection of non-negative numbers which have unit sum and are in one to one correspondence with his pure strategies.</p>
@@ -224,32 +224,38 @@ window.Quarto = {
 <div id="def-pay-off-function" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 2.3 (Pay-off-function, <span class="math inline">\(p_i\)</span>)</strong></span> The pay-off function, <span class="math inline">\(p_i\)</span>, used in the definition of a finite game above, has a unique extension to the n-tuples of mixed strategies which is linear in the mixed strategy of each player [n-linear]. This extension we shall also denote by <span class="math inline">\(p_i\)</span>, writing <span class="math inline">\(p_i(s_1, s_2, \cdots, s_n)\)</span>.</p>
 </div>
-<p>We shall write <span class="math inline">\(\symscr{s}\)</span> or <span class="math inline">\(\symscr{t}\)</span> to denote an n-tuple of mixed strategies and if <span class="math inline">\(\symscr{s} = (s_1, \cdots,s_n)\)</span> then <span class="math inline">\(p_i(\symscr{s})\)</span> shall mean <span class="math inline">\(p_i(s_1, s_2, \cdots, s_n)\)</span>. Such an n-tuple, <span class="math inline">\(\symscr{s}\)</span>, will also be regarded as point in a vector space, which space could be obtained by multiplying together the vector spaces containing the mixed strategies. And the set of all such n-tuples forms, of course, a convex polytope, the product of the simplices representing the mixed strategies.</p>
+<p>We shall write <span class="math inline">\(\symscr{s}\)</span> or <span class="math inline">\(\symscr{t}\)</span> to denote an n-tuple of mixed strategies and if <span class="math inline">\(\symscr{s} = (s_1, \cdots,s_n)\)</span> then <span class="math inline">\(p_i(\symscr{s})\)</span> shall mean <span class="math inline">\(p_i(s_1, s_2, \cdots, s_n)\)</span>. Such an n-tuple, <span class="math inline">\(\symscr{s}\)</span>, will also be regarded as a point in a vector space, which space could be obtained by multiplying together the vector spaces containing the mixed strategies. And the set of all such n-tuples forms, of course, a convex polytope, the product of the simplices representing the mixed strategies.</p>
 <p>For convenience we introduce the substitution notation <span class="math inline">\((\symscr{s}; t_i)\)</span> to stand for <span class="math inline">\((s_1, s_2, \cdots, s_{i-1}, t_i, s_{i+1}, \cdots, s_n)\)</span> where <span class="math inline">\(\symscr{s} = (s_1, s_2, \cdots, s_n)\)</span>. The effect of successive substitutions <span class="math inline">\(((\symscr{s}; t_i); r_j)\)</span> we indicate by <span class="math inline">\((\symscr{s}; t_i; r_j)\)</span>, etc.</p>
 <div id="def-equilibrium-point" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 2.4 (Equilibrium point)</strong></span> An n-tuple <span class="math inline">\(\symscr{s}\)</span> is an <u>equilibrium point</u> if and only if for every <span class="math inline">\(i\)</span></p>
 <p><span id="eq-equation-chap2-1"><span class="math display">\[
-p_i(\symscr{s}) = \max_{\text{all } r_i\text{'s}} [p_i(\symscr{s}; r_i)]
+p_i(\symscr{s}) = \max_{\text{all } r_i\text{'s}} [p_i(\symscr{s}; r_i)].
 \tag{2.1}\]</span></span></p>
 </div>
-<p>Thus an equilbrium point is an n-tuple <span class="math inline">\(\symscr{s}\)</span> such that each player’s mixed strategy maximizes his pay-off if the strategies of the others are held fixed. Thus each player’s strategy is optimal against those of the others. We shall occasionally abbreviate equilibrium point by eq. pt.</p>
+<p>Thus an equilibrium point is an n-tuple <span class="math inline">\(\symscr{s}\)</span> such that each player’s mixed strategy maximizes his pay-off if the strategies of the others are held fixed. Thus each player’s strategy is optimal against those of the others. We shall occasionally abbreviate equilibrium point by eq. pt.</p>
 <p>We say that a mixed strategy <span class="math inline">\(s_i\)</span> <u>uses</u> a pure strategy <span class="math inline">\(\pi_{i\beta}\)</span> if <span class="math inline">\(s_i = \sum_{\alpha} c_{i\alpha} \pi_{i\alpha}\)</span> and <span class="math inline">\(c_{i\beta}&gt;0\)</span>. If <span class="math inline">\(\symscr{s} = (s_1, s_2,\cdots, s_n)\)</span> and <span class="math inline">\(s_i\)</span> uses <span class="math inline">\(\pi_{i\alpha}\)</span> we also say that <span class="math inline">\(\symscr{s}\)</span> uses <span class="math inline">\(\pi_{i\alpha}\)</span>.</p>
-<p>From the linearity of <span class="math inline">\(p_i(s_1, \cdots, s_n)\)</span> in <span class="math inline">\(s_i\)</span>:</p>
+<p>From the linearity of <span class="math inline">\(p_i(s_1, \cdots, s_n)\)</span> in <span class="math inline">\(s_i\)</span>,</p>
 <p><span id="eq-equation-chap2-2"><span class="math display">\[
-\max_{\text{all } r_i\text{'s}} [p_i(\symscr{s}; t_i)] = \max_{\alpha} [p_i(\symscr{s}; \pi_{i\alpha})]
+\max_{\text{all } r_i\text{'s}} [p_i(\symscr{s}; r_i)] = \max_{\alpha} [p_i(\symscr{s}; \pi_{i\alpha})].
 \tag{2.2}\]</span></span></p>
 <p>We define <span class="math inline">\(p_{i\alpha}(\symscr{s}) = p_i(\symscr{s}; \pi_{i\alpha})\)</span>. Then we obtain the following trivial necessary and sufficient condition for <span class="math inline">\(\symscr{s}\)</span> to be an equilibrium point:</p>
 <p><span id="eq-equation-chap2-3"><span class="math display">\[
-p_i(\symscr{s}) = \max_{\alpha} p_{i\alpha}(\symscr{s})
+p_i(\symscr{s}) = \max_{\alpha} p_{i\alpha}(\symscr{s}).
 \tag{2.3}\]</span></span></p>
-<p>If <span class="math inline">\(\symscr{s} = (s_1, s_2, \cdots, s_n )\)</span> and <span class="math inline">\(s_i = \sum_{\alpha } c_{i\alpha} \pi_{i\alpha}\)</span> then <span class="math inline">\(p_i(\symscr{s}) = \sum_{\alpha} c_{i\alpha} p_{i\alpha}(\symscr{s})\)</span>, consequently for <a href="#eq-equation-chap2-3" class="quarto-xref">Equation&nbsp;<span>2.3</span></a> to hold we must have <span class="math inline">\(c_{i\alpha} = 0\)</span> whenever <span class="math inline">\(p_{i\alpha}(\symscr{s}) &lt; \max\limits_{\beta} p_{i\beta}(\symscr{s})\)</span>, which is to say that <span class="math inline">\(\symscr{s}\)</span> does not use <span class="math inline">\(\pi_{i\alpha}\)</span> unless it is an optimal pure strategy for player <span class="math inline">\(i\)</span>. So we write</p>
+<p>If <span class="math inline">\(\symscr{s} = (s_1, s_2, \cdots, s_n )\)</span> and <span class="math inline">\(s_i = \sum_{\alpha } c_{i\alpha} \pi_{i\alpha}\)</span> then <span class="math inline">\(p_i(\symscr{s}) = \sum_{\alpha} c_{i\alpha} p_{i\alpha}(\symscr{s})\)</span>, consequently for <a href="#eq-equation-chap2-3" class="quarto-xref"><span>2.3</span></a> to hold we must have <span class="math inline">\(c_{i\alpha} = 0\)</span> whenever <span class="math inline">\(p_{i\alpha}(\symscr{s}) &lt; \max_{\beta} p_{i\beta}(\symscr{s})\)</span>, which is to say that <span class="math inline">\(\symscr{s}\)</span> does not use <span class="math inline">\(\pi_{i\alpha}\)</span> unless it is an optimal pure strategy for player <span class="math inline">\(i\)</span>. So we write</p>
 <p><span id="eq-equation-chap2-4"><span class="math display">\[
 \text{if } \pi_{i\alpha} \text{ is used in } \symscr{s} \text{ then } p_i(\symscr{s}) = \max_{\beta} p_{i\beta}(\symscr{s})  
 \tag{2.4}\]</span></span></p>
 <p>as another necessary and sufficient condition for an equilibrium point.</p>
-<p>Since a criterion <a href="#eq-equation-chap2-3" class="quarto-xref">Equation&nbsp;<span>2.3</span></a> for an eq. pt.&nbsp;can be expressed as the equating of two continuous functions on the space of n-tuples <span class="math inline">\(\symscr{s}\)</span> the eq. pts. obviously form a closed subset of this space. Actually, this subset is formed from a number of pieces of algebraic varieties, cut out by other algebraic varieties.</p>
+<p>Since a criterion <a href="#eq-equation-chap2-3" class="quarto-xref"><span>2.3</span></a> for an eq. pt.&nbsp;can be expressed as the equating of two continuous functions on the space of n-tuples <span class="math inline">\(\symscr{s}\)</span> the eq. pts. obviously form a closed subset of this space. Actually, this subset is formed from a number of pieces of algebraic varieties, cut out by other algebraic varieties.</p>
 
 
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Definitions are highlighted explicitly in this <a href="https://quarto.org/">Quarto</a> version.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
