@@ -1,11 +1,13 @@
 # Formal Definitions and Terminology
 
-In this section we define the basic concepts of this paper and set up standard terminology and notation. Important definitions will be preceded by a subtitle indicating the concept defined. The non-cooperative idea will be implicit, rather than explicit, below.
+In this section we define the basic concepts of this paper and set up standard terminology and notation. Important definitions will be preceded by a subtitle indicating the concept defined[^formal_definitions_and_terminology-1]. The non-cooperative idea will be implicit, rather than explicit, below.
+
+[^formal_definitions_and_terminology-1]: Definitions are highlighted explicitly in this [Quarto](https://quarto.org/) version.
 
 ::: {#def-finite-game}
 ## Finite Game
 
-For us an [n-person game]{.underline} will be a set of n [players]{.underline}, or [positions]{.underline}, each with an associated finite of [pure strategies]{.underline}; and corresponding to each player, $i$, a [pay-off function]{.underline}, $p_i$, which maps the set of all n-tuples of pure strategies into the real numberes. When we use the word [n-tuples]{.underline} we shall always mean a set of n items, with each item associated with a different player.
+For us an [n-person game]{.underline} will be a set of n [players]{.underline}, or [positions]{.underline}, each with an associated finite set of [pure strategies]{.underline}; and corresponding to each player, $i$, a [pay-off function]{.underline}, $p_i$, which maps the set of all n-tuples of pure strategies into the real numbers. When we use the term [n-tuple]{.underline} we shall always mean a set of n items, with each item associated with a different player.
 :::
 
 ::: {#def-mixed-strategy}
@@ -24,7 +26,7 @@ We shall use the suffixes $i,j,k$ for players and $\alpha ,\beta ,\gamma$ to ind
 The pay-off function, $p_i$, used in the definition of a finite game above, has a unique extension to the n-tuples of mixed strategies which is linear in the mixed strategy of each player \[n-linear\]. This extension we shall also denote by $p_i$, writing $p_i(s_1, s_2, \cdots, s_n)$.
 :::
 
-We shall write $\symscr{s}$ or $\symscr{t}$ to denote an n-tuple of mixed strategies and if $\symscr{s} = (s_1, \cdots,s_n)$ then $p_i(\symscr{s})$ shall mean $p_i(s_1, s_2, \cdots, s_n)$. Such an n-tuple, $\symscr{s}$, will also be regarded as point in a vector space, which space could be obtained by multiplying together the vector spaces containing the mixed strategies. And the set of all such n-tuples forms, of course, a convex polytope, the product of the simplices representing the mixed strategies.
+We shall write $\symscr{s}$ or $\symscr{t}$ to denote an n-tuple of mixed strategies and if $\symscr{s} = (s_1, \cdots,s_n)$ then $p_i(\symscr{s})$ shall mean $p_i(s_1, s_2, \cdots, s_n)$. Such an n-tuple, $\symscr{s}$, will also be regarded as a point in a vector space, which space could be obtained by multiplying together the vector spaces containing the mixed strategies. And the set of all such n-tuples forms, of course, a convex polytope, the product of the simplices representing the mixed strategies.
 
 For convenience we introduce the substitution notation $(\symscr{s}; t_i)$ to stand for $(s_1, s_2, \cdots, s_{i-1}, t_i, s_{i+1}, \cdots, s_n)$ where $\symscr{s} = (s_1, s_2, \cdots, s_n)$. The effect of successive substitutions $((\symscr{s}; t_i); r_j)$ we indicate by $(\symscr{s}; t_i; r_j)$, etc.
 
@@ -34,31 +36,31 @@ For convenience we introduce the substitution notation $(\symscr{s}; t_i)$ to st
 An n-tuple $\symscr{s}$ is an [equilibrium point]{.underline} if and only if for every $i$
 
 $$
-p_i(\symscr{s}) = \max_{\text{all } r_i\text{'s}} [p_i(\symscr{s}; r_i)]
-$${#eq-equation-chap2-1}
+p_i(\symscr{s}) = \max_{\text{all } r_i\text{'s}} [p_i(\symscr{s}; r_i)].
+$$ {#eq-equation-chap2-1}
 :::
 
-Thus an equilbrium point is an n-tuple $\symscr{s}$ such that each player's mixed strategy maximizes his pay-off if the strategies of the others are held fixed. Thus each player's strategy is optimal against those of the others. We shall occasionally abbreviate equilibrium point by eq. pt.
+Thus an equilibrium point is an n-tuple $\symscr{s}$ such that each player's mixed strategy maximizes his pay-off if the strategies of the others are held fixed. Thus each player's strategy is optimal against those of the others. We shall occasionally abbreviate equilibrium point by eq. pt.
 
 We say that a mixed strategy $s_i$ [uses]{.underline} a pure strategy $\pi_{i\beta}$ if $s_i = \sum_{\alpha} c_{i\alpha} \pi_{i\alpha}$ and $c_{i\beta}>0$. If $\symscr{s} = (s_1, s_2,\cdots, s_n)$ and $s_i$ uses $\pi_{i\alpha}$ we also say that $\symscr{s}$ uses $\pi_{i\alpha}$.
 
-From the linearity of $p_i(s_1, \cdots, s_n)$ in $s_i$: 
+From the linearity of $p_i(s_1, \cdots, s_n)$ in $s_i$,
 
 $$
-\max_{\text{all } r_i\text{'s}} [p_i(\symscr{s}; t_i)] = \max_{\alpha} [p_i(\symscr{s}; \pi_{i\alpha})] 
-$${#eq-equation-chap2-2}
-   
+\max_{\text{all } r_i\text{'s}} [p_i(\symscr{s}; r_i)] = \max_{\alpha} [p_i(\symscr{s}; \pi_{i\alpha})].
+$$ {#eq-equation-chap2-2}
+
 We define $p_{i\alpha}(\symscr{s}) = p_i(\symscr{s}; \pi_{i\alpha})$. Then we obtain the following trivial necessary and sufficient condition for $\symscr{s}$ to be an equilibrium point:
 
 $$
-p_i(\symscr{s}) = \max_{\alpha} p_{i\alpha}(\symscr{s})
-$${#eq-equation-chap2-3}
-   
-If $\symscr{s} = (s_1, s_2, \cdots, s_n )$ and $s_i = \sum_{\alpha } c_{i\alpha} \pi_{i\alpha}$ then $p_i(\symscr{s}) = \sum_{\alpha} c_{i\alpha} p_{i\alpha}(\symscr{s})$, consequently for @eq-equation-chap2-3 to hold we must have $c_{i\alpha} = 0$ whenever $p_{i\alpha}(\symscr{s}) < \max\limits_{\beta} p_{i\beta}(\symscr{s})$, which is to say that $\symscr{s}$ does not use $\pi_{i\alpha}$ unless it is an optimal pure strategy for player $i$. So we write
+p_i(\symscr{s}) = \max_{\alpha} p_{i\alpha}(\symscr{s}).
+$$ {#eq-equation-chap2-3}
+
+If $\symscr{s} = (s_1, s_2, \cdots, s_n )$ and $s_i = \sum_{\alpha } c_{i\alpha} \pi_{i\alpha}$ then $p_i(\symscr{s}) = \sum_{\alpha} c_{i\alpha} p_{i\alpha}(\symscr{s})$, consequently for @eq-equation-chap2-3 to hold we must have $c_{i\alpha} = 0$ whenever $p_{i\alpha}(\symscr{s}) < \max_{\beta} p_{i\beta}(\symscr{s})$, which is to say that $\symscr{s}$ does not use $\pi_{i\alpha}$ unless it is an optimal pure strategy for player $i$. So we write
 
 $$
 \text{if } \pi_{i\alpha} \text{ is used in } \symscr{s} \text{ then } p_i(\symscr{s}) = \max_{\beta} p_{i\beta}(\symscr{s})  
-$${#eq-equation-chap2-4}
+$$ {#eq-equation-chap2-4}
 
 as another necessary and sufficient condition for an equilibrium point.
 

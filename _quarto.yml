@@ -5,7 +5,7 @@ project:
 book:
   # book
   title: "Non-Cooperative Games"
-  author: "John Forbes Nash"
+  author: "John Forbes Nash Jr."
   date: "1950-05"
   date-format: "MMMM, YYYY"
   downloads: [pdf]
@@ -48,7 +48,7 @@ format:
     # See https://github.com/orgs/quarto-dev/discussions/9839
     toc: false
     # fonts
-    fontsize: 11pt
+    fontsize: 12pt
     # colors
     linkcolor: blue
     citecolor: blue
@@ -60,9 +60,9 @@ format:
     geometry:
       - top=2.5cm
       - bottom=2.5cm
-      - inner=2.5cm
-      - outer=2.5cm
-    indent: true
+      - left=4cm
+      - right=4cm
+    indent: false
     # references
     link-citations: true
     link-bibliography: true
@@ -79,6 +79,12 @@ format:
 
 bibliography: references/non-cooperative_games.bib
 csl: references/apa_7ed.csl
+
+
+# cross reference
+crossref:
+  eq-prefix: ""
+  eq-labels: arabic
 
 engine: knitr
 editor: source
