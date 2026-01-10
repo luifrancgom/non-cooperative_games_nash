@@ -1,1 +1,41 @@
 # Symmetries of Games
+
+An [automorphism]{.underline}, or [symmetry]{.underline}, of a game will be a permutation of its pure strategies which satisfies certain conditions, given below.
+
+If two strategies belong to a single player they must go into two strategies belonging to a single player. Thus if $\phi$ is the permutation of the pure strategies it induces a permutation $\psi$ of the players. 
+
+Each n-tuple of pure strategies is therefore permuted into another n-tuple of pure strategies. We may call $\chi$ the induced permutation of these n-tupless. Let $\xi$ denote an n-tuple of pure strategies and $p_i(\xi)$ the pay-off to player $i$ when the n-tuple $\xi$ is employed. We require that if 
+
+$$
+j=i^{\psi} \text{ then } p_j(\xi^{\chi}) = p_i(\xi)
+$$
+
+which completes the definition of a symmetry.
+
+The permutation $\phi$ has a unique linear extension to the mixed strategies. If $s_i = \sum_{\alpha} c_{i\alpha} \pi_{i\alpha}$ we define $(s_i )^{\phi} = \sum_{\alpha} c_{i\alpha} (\pi_{i\alpha})^{\phi}$.
+
+The extension of $\phi$ to the mixed strategies clearly generates an extension of $\chi$ to the n-tuples of mixed strategies. We shall also denote this by $\chi$.
+
+We define a [symmetric n-tuple]{.underline} $\symscr{s}$ of a game by $\symscr{s}^{\chi} = \symscr{s}$ for all $\chi$'s it being understood that $\chi$ means a permutation derived from a symmetry $\phi$.
+
+::: {#thm-existence-symmetric-equilibrium-point}
+Any finite game has a symmetric equilibrium point.
+:::
+
+::: {.proof}
+First we note that $s_{i0} = \frac{\sum_{\alpha} \pi_{j\alpha}}{\sum_{\alpha} 1}$ has the property $(s_{i0})^{\phi} = s_{j0}$ where $j=i^{\psi}$, so that the n-tuple $\symscr{s}_0 = (s_{10}, s_{20}, \ldots, s_{n0})$ is fixed under any $\chi$; hence any game has at least one symmetric n-tuple. 
+
+If $\symscr{s} = (s_1, \ldots, s_n)$ and $\symscr{t} = (t_1, \ldots, t_n)$ are symmetric then $\frac{\symscr{s} + \symscr{t}}{2} = \left( \frac{s_1 + t_1}{2}, \ldots, \frac{s_n + t_n}{2} \right)$ is so too because $\symscr{s}^{\chi} = \symscr{s} \iff s_j = (s_i)^{\phi}$ where $j = i^{\psi}$, hence 
+
+$$
+\frac{s_j + t_j}{2} = \frac{(s_i)^{\phi} + (t_i)^{\phi}}{2} = \left( \frac{s_i + t_i}{2} \right)^{\phi}, \text{ hence } \left( \frac{\symscr{s} + \symscr{t}}{2} \right)^{\chi} = \frac{\symscr{s} + \symscr{t}}{2}.
+$$
+
+This shows that the set of symmetric n-tuples is a convex subset of the space of n-tuples since it is obviously closed.
+
+Now observe that for each $\lambda$ the mapping $\symscr{s} \to \symscr{s}'(\symscr{s}, \lambda)$ used in the proof of existence theorem was intrinsically defined. Therefore, if $\symscr{s}_2 = \symscr{s}'(\mathcal{s}_1, \lambda)$ and $\chi$ is a permutation derived from[^footnote-chapter4-1] an automorphism of the game we will have $\symscr{s}_2^{\chi} = \symscr{s}'(\symscr{s}_1^{\chi} , \lambda)$. If $\symscr{s}_1$ is symmetric $\symscr{s} _1^{\chi} = \symscr{s}_1$ and therefore $\symscr{s}_2^{\chi} = \symscr{s}'(\symscr{s}_1, \lambda) = \symscr{s}_2$. Consequently this mapping maps the set of symmetric n-tuples to itself. 
+
+Since this set is a cell there must be a symmetric fixed point of $\symscr{s}_{\lambda}$. And, as in the proof of the existence theorem we could obtain a limit point $\symscr{s}^{*}$ which would have to be symmetric.
+:::
+
+[^footnote-chapter4-1]: The fragment "a permutation derived from" is included in this [Quarto](https://quarto.org/) version as it was added by hand in the original manuscript.

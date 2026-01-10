@@ -2,14 +2,16 @@
 
 I have previously published \[[Proc. N. A. S.]{.underline} 36 (1950) 48-49\] [@nash_equilibrium_1950] a proof of the result below based on Kakutani's generalized fixed point theorem. The proof given here uses the Brouwer theorem.
 
-The method is to set up a sequence of continuous mappings: $\symscr{s} \to \symscr{s}'(\symscr{s}, 1); \symscr{s} \to \symscr{s}'(\symscr{s}, 2); \ldots$ whose fixed points have an equilibrium point as limit point. A limit mapping exists, but is discontinuous, and need not have any fixed points.
+The method is to set up a sequence of continuous mappings: $\symscr{s} \to \symscr{s}'(\symscr{s}, 1); \symscr{s} \to \symscr{s}'(\symscr{s}, 2); \ldots$ whose fixed points have an equilibrium point as a[^footnote-chapter3-1] limit point. A limit mapping exists, but is discontinuous, and need not have any fixed points.
+
+[^footnote-chapter3-1]: The article "a" has been added before "limit point" to align with modern grammatical standards in this [Quarto](https://quarto.org/) version. 
 
 ::: {#thm-existence-equilibrium-point}
 Every finite game has an equilibrium point.
 :::
 
 ::: {.proof}
-Using our standard notation, let $\symscr{s}$ be an n-tuple of mixed strategies, and $p_{i\alpha }(\symscr{s})$ the pay-off to player $i$ if he uses his pure strategy $\pi_{i\alpha}$ and the others use their respective mixed strategies in $\symscr{s}$. For each integer $\lambda$ we define the following continuous functions of $\symscr{s}$:
+Using our standard notation, let $\symscr{s}$ be an n-tuple of mixed strategies, and $p_{i\alpha}(\symscr{s})$ the pay-off to player $i$ if he uses his pure strategy $\pi_{i\alpha}$ and the others use their respective mixed strategies in $\symscr{s}$. For each integer $\lambda$ we define the following continuous functions of $\symscr{s}$:
 
 $$
 \begin{aligned}
@@ -19,7 +21,9 @@ q_i(\symscr{s}) &= \max_{\alpha} p_{i\alpha}(\symscr{s}), \\
 \end{aligned}
 $$
 
-Now $\sum_{\alpha} \phi_{i\alpha}^{+}(\symscr{s}, \lambda) \geq \max_{\alpha} \phi_{i\alpha}^{+}(\symscr{s}, \lambda) = \frac{1}{\lambda} > 0$ so that $c_{i\alpha }'(\symscr{s}, \lambda) = \frac{\phi_{i\alpha}^{+}(\symscr{s}, \lambda)}{\sum_{\beta } \phi_{i\beta}^{+}(\symscr{s}, \lambda)}$ is continuous. Define $s'_i(\symscr{s}, \lambda) = \sum_{\alpha } \pi_{i\alpha} c'_{i\alpha}(\symscr{s}, \lambda)$ and $\symscr{s}'(\symscr{s}, \lambda) = (s_1', s_2', \ldots, s_n')$. Since all the operations have preserved continuity, the mapping $\symscr{s} \to \symscr{s}'(\symscr{s}, \lambda)$ is continuous; and since the space of n-tuples, $\symscr{s}$, is a cell, there must be a fixed point for each $\lambda$. Hence there will be a subsequence $\symscr{s}_{\mu}$, converging to $\symscr{s}^{*}$, where $\symscr{s}_{\mu}$ is fixed under the mapping $\symscr{s} \to \symscr{s}'(\symscr{s}, \lambda_{(\mu)})$. 
+Now $\sum_{\alpha} \phi_{i\alpha}^{+}(\symscr{s}, \lambda) \geq \max_{\alpha} \phi_{i\alpha}^{+}(\symscr{s}, \lambda) = \frac{1}{\lambda} > 0$ so that $c_{i\alpha }'(\symscr{s}, \lambda) = \frac{\phi_{i\alpha}^{+}(\symscr{s}, \lambda)}{\sum_{\beta } \phi_{i\beta}^{+}(\symscr{s}, \lambda)}$ is continuous. 
+
+Define $s'_i(\symscr{s}, \lambda) = \sum_{\alpha } \pi_{i\alpha} c'_{i\alpha}(\symscr{s}, \lambda)$ and $\symscr{s}'(\symscr{s}, \lambda) = (s_1', s_2', \ldots, s_n')$. Since all the operations have preserved continuity, the mapping $\symscr{s} \to \symscr{s}'(\symscr{s}, \lambda)$ is continuous; and since the space of n-tuples, $\symscr{s}$, is a cell, there must be a fixed point for each $\lambda$. Hence there will be a subsequence $\symscr{s}_{\mu}$, converging to $\symscr{s}^{*}$, where $\symscr{s}_{\mu}$ is fixed under the mapping $\symscr{s} \to \symscr{s}'(\symscr{s}, \lambda_{(\mu)})$. 
 
 Now supposed $\symscr{s}^{*}$ were not an equilibrium point. Then if $\symscr{s}^{*} = (s_1^*, \ldots, s_n^*)$ some component $s_i^*$ must be non-optimal against the others, which means $s_i^*$ uses some pure strategy $\pi_{i\alpha}$ which is non-optimal \[see @eq-equation-chap2-4, pg. 4\]. This means that $p_{i\alpha}(\symscr{s}^{*}) < q_i(\symscr{s}^{*})$ which justifies writing $p_{i\alpha}(\symscr{s}^{*}) - q_i(\symscr{s}^{*}) < -\epsilon$.
 

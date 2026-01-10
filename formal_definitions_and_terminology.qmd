@@ -1,8 +1,10 @@
 # Formal Definitions and Terminology
 
-In this section we define the basic concepts of this paper and set up standard terminology and notation. Important definitions will be preceded by a subtitle indicating the concept defined[^formal_definitions_and_terminology-1]. The non-cooperative idea will be implicit, rather than explicit, below.
+In this section we define the basic concepts of this paper and set up standard terminology and notation. Important definitions will be preceded[^footnote-chapter2-1] by a subtitle[^footnote-chapter2-2] indicating the concept defined[^footnote-chapter2-3]. The non-cooperative idea will be implicit, rather than explicit, below.
 
-[^formal_definitions_and_terminology-1]: Definitions are highlighted explicitly in this [Quarto](https://quarto.org/) version.
+[^footnote-chapter2-1]: The original spelling "preceeded" has been updated to "preceded" in this [Quarto](https://quarto.org/) version.
+[^footnote-chapter2-2]: The original hyphenated "sub-title" has been rendered as "subtitle" to improve readability in this [Quarto](https://quarto.org/) version. 
+[^footnote-chapter2-3]: Definitions are highlighted explicitly in this [Quarto](https://quarto.org/) version.
 
 ::: {#def-finite-game}
 ## Finite Game

@@ -18,7 +18,7 @@ book:
     - introduction.qmd
     - formal_definitions_and_terminology.qmd
     - existence_of_equilibrium_points.qmd
-    # - symmetries_of_games.qmd
+    - symmetries_of_games.qmd
     # - solutions.qmd
     # - geometrical_form_of_solutions.qmd
     # - dominance_and_contradiction_methods.qmd
@@ -48,7 +48,7 @@ format:
     # See https://github.com/orgs/quarto-dev/discussions/9839
     toc: false
     # fonts
-    fontsize: 12pt
+    fontsize: 11pt
     # colors
     linkcolor: blue
     citecolor: blue
