@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="John Forbes Nash Jr.">
 
-<title>Non-Cooperative Games</title>
+<title>4&nbsp; Symmetries of Games – Non-Cooperative Games</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./introduction.html" rel="next">
+<link href="./applications.html" rel="next">
+<link href="./existence_of_equilibrium_points.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -71,10 +71,39 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
-<body class="nav-sidebar floating fullcontent quarto-light">
+<body class="nav-sidebar floating quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -83,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Abstract</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./symmetries_of_games.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Symmetries of Games</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -119,7 +148,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Abstract</span></a>
   </div>
 </li>
@@ -143,7 +172,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./symmetries_of_games.html" class="sidebar-item-text sidebar-link">
+  <a href="./symmetries_of_games.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Symmetries of Games</span></span></a>
   </div>
 </li>
@@ -170,32 +199,22 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Non-Cooperative Games</h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Symmetries of Games</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>John Forbes Nash Jr. </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">May, 1950</p>
-    </div>
-  </div>
   
     
   </div>
@@ -205,15 +224,36 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="abstract" class="level1 unnumbered unlisted">
-<h1 class="unnumbered unlisted">Abstract</h1>
-<p>This paper introduces the concept of a non-cooperative game and develops methods for the mathematical analysis of such games. The games considered are n-person games represented by means of pure strategies and pay-off functions defined for the combinations of pure strategies.</p>
-<p>The distinction between cooperative and non-cooperative games is unrelated to the mathematical description by means of pure strategies and pay-off functions of a game. Rather, it depends on the possibility or impossibility of coalitions, communication, and side-payments.</p>
-<p>The concepts of an equilibrium point, a solution, a strong solution, a sub-solution, and values are introduced by mathematical definitions. And in later sections the interpretation of those concepts in non-cooperative games is discussed.</p>
-<p>The main mathematical result is the proof of the existence in any game of at least one equilibrium point. Other results concern the geometrical structure of the set of equilibrium points of a game with a solution, the geometry of sub-solutions, and the existence of a symmetrical equilibrium point in a symmetrical game.</p>
-<p>As an illustration of the possibilities for application a treatment of a simple three-man poker model is included.</p>
+<p>An <u>automorphism</u>, or <u>symmetry</u>, of a game will be a permutation of its pure strategies which satisfies certain conditions, given below.</p>
+<p>If two strategies belong to a single player they must go into two strategies belonging to a single player. Thus if <span class="math inline">\(\phi\)</span> is the permutation of the pure strategies it induces a permutation <span class="math inline">\(\psi\)</span> of the players.</p>
+<p>Each n-tuple of pure strategies is therefore permuted into another n-tuple of pure strategies. We may call <span class="math inline">\(\chi\)</span> the induced permutation of these n-tupless. Let <span class="math inline">\(\xi\)</span> denote an n-tuple of pure strategies and <span class="math inline">\(p_i(\xi)\)</span> the pay-off to player <span class="math inline">\(i\)</span> when the n-tuple <span class="math inline">\(\xi\)</span> is employed. We require that if</p>
+<p><span class="math display">\[
+j=i^{\psi} \text{ then } p_j(\xi^{\chi}) = p_i(\xi)
+\]</span></p>
+<p>which completes the definition of a symmetry.</p>
+<p>The permutation <span class="math inline">\(\phi\)</span> has a unique linear extension to the mixed strategies. If <span class="math inline">\(s_i = \sum_{\alpha} c_{i\alpha} \pi_{i\alpha}\)</span> we define <span class="math inline">\((s_i )^{\phi} = \sum_{\alpha} c_{i\alpha} (\pi_{i\alpha})^{\phi}\)</span>.</p>
+<p>The extension of <span class="math inline">\(\phi\)</span> to the mixed strategies clearly generates an extension of <span class="math inline">\(\chi\)</span> to the n-tuples of mixed strategies. We shall also denote this by <span class="math inline">\(\chi\)</span>.</p>
+<p>We define a <u>symmetric n-tuple</u> <span class="math inline">\(\symscr{s}\)</span> of a game by <span class="math inline">\(\symscr{s}^{\chi} = \symscr{s}\)</span> for all <span class="math inline">\(\chi\)</span>’s it being understood that <span class="math inline">\(\chi\)</span> means a permutation derived from a symmetry <span class="math inline">\(\phi\)</span>.</p>
+<div id="thm-existence-symmetric-equilibrium-point" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 4.1</strong></span> Any finite game has a symmetric equilibrium point.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Proof</em>. </span>First we note that <span class="math inline">\(s_{i0} = \frac{\sum_{\alpha} \pi_{j\alpha}}{\sum_{\alpha} 1}\)</span> has the property <span class="math inline">\((s_{i0})^{\phi} = s_{j0}\)</span> where <span class="math inline">\(j=i^{\psi}\)</span>, so that the n-tuple <span class="math inline">\(\symscr{s}_0 = (s_{10}, s_{20}, \ldots, s_{n0})\)</span> is fixed under any <span class="math inline">\(\chi\)</span>; hence any game has at least one symmetric n-tuple.</p>
+<p>If <span class="math inline">\(\symscr{s} = (s_1, \ldots, s_n)\)</span> and <span class="math inline">\(\symscr{t} = (t_1, \ldots, t_n)\)</span> are symmetric then <span class="math inline">\(\frac{\symscr{s} + \symscr{t}}{2} = \left( \frac{s_1 + t_1}{2}, \ldots, \frac{s_n + t_n}{2} \right)\)</span> is so too because <span class="math inline">\(\symscr{s}^{\chi} = \symscr{s} \iff s_j = (s_i)^{\phi}\)</span> where <span class="math inline">\(j = i^{\psi}\)</span>, hence</p>
+<p><span class="math display">\[
+\frac{s_j + t_j}{2} = \frac{(s_i)^{\phi} + (t_i)^{\phi}}{2} = \left( \frac{s_i + t_i}{2} \right)^{\phi}, \text{ hence } \left( \frac{\symscr{s} + \symscr{t}}{2} \right)^{\chi} = \frac{\symscr{s} + \symscr{t}}{2}.
+\]</span></p>
+<p>This shows that the set of symmetric n-tuples is a convex subset of the space of n-tuples since it is obviously closed.</p>
+<p>Now observe that for each <span class="math inline">\(\lambda\)</span> the mapping <span class="math inline">\(\symscr{s} \to \symscr{s}'(\symscr{s}, \lambda)\)</span> used in the proof of existence theorem was intrinsically defined. Therefore, if <span class="math inline">\(\symscr{s}_2 = \symscr{s}'(\mathcal{s}_1, \lambda)\)</span> and <span class="math inline">\(\chi\)</span> is a permutation derived from<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> an automorphism of the game we will have <span class="math inline">\(\symscr{s}_2^{\chi} = \symscr{s}'(\symscr{s}_1^{\chi} , \lambda)\)</span>. If <span class="math inline">\(\symscr{s}_1\)</span> is symmetric <span class="math inline">\(\symscr{s} _1^{\chi} = \symscr{s}_1\)</span> and therefore <span class="math inline">\(\symscr{s}_2^{\chi} = \symscr{s}'(\symscr{s}_1, \lambda) = \symscr{s}_2\)</span>. Consequently this mapping maps the set of symmetric n-tuples to itself.</p>
+<p>Since this set is a cell there must be a symmetric fixed point of <span class="math inline">\(\symscr{s}_{\lambda}\)</span>. And, as in the proof of the existence theorem we could obtain a limit point <span class="math inline">\(\symscr{s}^{*}\)</span> which would have to be symmetric.</p>
+</div>
 
 
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>The fragment “a permutation derived from” is included in this <a href="https://quarto.org/">Quarto</a> version as it was added by hand in the original manuscript.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->
@@ -619,10 +659,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./existence_of_equilibrium_points.html" class="pagination-link" aria-label="Existence of Equilibrium Points">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Existence of Equilibrium Points</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./introduction.html" class="pagination-link" aria-label="Introduction">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./applications.html" class="pagination-link" aria-label="Applications">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Applications</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -631,4 +674,4 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/luifrancgom/non-cooperative_games_nash/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/luifrancgom/non-cooperative_games_nash/blob/main/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/luifrancgom/non-cooperative_games_nash/issues" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/luifrancgom/non-cooperative_games_nash/edit/main/symmetries_of_games.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/luifrancgom/non-cooperative_games_nash/blob/main/symmetries_of_games.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/luifrancgom/non-cooperative_games_nash/issues" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
