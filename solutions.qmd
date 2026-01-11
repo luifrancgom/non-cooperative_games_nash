@@ -1,1 +1,148 @@
 # Solutions
+
+We define here solutions, strong solutions, and sub-solutions. A non-cooperative game does not always have a solution, but when it does the solution is unique. Strong solutions are solutions with special properties. Sub-solutions always exist and have many of the properties of solutions, but lack uniqueness.
+
+$S_i$ will denote a set of mixed strategies of player $i$ and $\symscr{S}$ a set of n-tuples of mixed strategies.
+
+::: {#def-solvability}
+## Solvability
+
+A game is solvable if its set, $\symscr{S}$, of equilibrium points satisfies the condition
+
+$$
+(\symscr{t}; r_i) \in \symscr{S} \text{ and } \symscr{s} \in \symscr{S}  \implies  (\symscr{s}; r_i) \in \symscr{S} \text{ for all } i\text{'s}.
+$$ {#eq-equation-chap5-1}
+:::
+
+This is called the [interchangeability]{.underline} condition. The [solution]{.underline} of a solvable game is its set, $\symscr{S}$, of equilibrium points.
+
+::: {#def-strong-solvability}
+## Strong Solvability
+
+A game is [strongly solvable]{.underlineß} if it has a solution, $\symscr{S}$, such that for all $i$'s 
+
+$$
+\symscr{s} \in \symscr{S} \text{ and } p_i(\symscr{s}; r_i) = p_i(\symscr{s}) \implies (\symscr{s}; r_i) \in \symscr{S} 
+$$ 
+    
+and then $\symscr{S}$ is called a [strong solution]{.underline}.
+:::
+
+::: {#def-equilibrium-strategies}
+## Equilibrium Strategies
+
+In a solvable game set $S_i$ be the set of all mixed strategies $s_i$ such that for some $\symscr{t}$ the n-tuple $(\symscr{t}; s_i)$ is an equilibrium point. \[$s_i$ is the $i^{th}$ component of some equilibrium point.\] We call $S_i$ the set of [equilibrium strategies]{.underline} of player $i$.
+:::
+
+::: {#def-sub-solutions}
+## Sub-solutions
+
+If $\symscr{S}$ is a subset of the set of equilibrium points of a game and satisfies condition @eq-equation-chap5-1; and if $\symscr{S}$ is maximal relative to this property then we call $\symscr{S}$ a [sub-solution]{.underline}.
+:::
+
+For any sub-solution $\symscr{S}$ we define the $i^{th}$ [factor set]{.underline}, $S_i$, as the set of all $s_i$'s such that $\symscr{S}$ contains $(\symscr{t}; s_i)$ for some $\symscr{t}$.
+
+Note that a sub-solution, when unique, is a solution; and its factor sets are the sets of equilibrium strategies.
+
+::: {#thm-sub-solution-factor-set}
+A sub-solution, $\symscr{S}$, is the set of all n-tuples $(s_1,s_2, \ldots, s_n)$ such that each $s_i \in S_i$ where $S_i$ is the $i^{th}$ factor set of $\symscr{S}$. Geometrically, $\symscr{S}$ is the product of its factor sets.
+:::
+
+::: {.proof}
+Consider such an n-tuple $(s_1, \ldots, s_n)$. By definition $\exists \symscr{t}_1, \symscr{t}_2, \ldots, \symscr{t}_n$ such that for each $i$ $(\symscr{t}_i; s_i) \in \symscr{S}$. Using the condition @eq-equation-chap5-1 n-1 times we obtain successively $(\mathcal{t}_1; s_1; s_2) \in \symscr{S}, \ldots, (\symscr{t}_1; s_1; s_2; s_3; \ldots; s_n) \in \symscr{S}$ and the last is simply $(s_1, s_2, \ldots, s_n) \in \symscr{S}$, which we needed to show.
+:::
+
+::: {#thm-factor-sets-closed-convex}
+The factor sets $S_1, S_2, \ldots, S_n$ of a sub-solution are closed and convex as subsets of the mixed strategy spaces.
+:::
+
+::: {.proof}
+It suffices to show two things:
+
+(a) if $s_i$ and $s_i' \in S_i$ then $s_i^{*} = \frac{(s_i + s_i')}{2} \in S_i$; 
+(b) if $s_i^{\#}$ is a limit point of $S_i$ then $s_i^{\#} \in S_i$.
+
+Let $\symscr{t} \in \symscr{S}$. Then we have $p_j(\symscr{t};s_i) \geq p_j(\symscr{t}; s_i; r_j)$ and $p_j(\symscr{t}; s_i) \geq p_j(\symscr{t}; s_i'; r_j)$ for any $r_j$, by using the criterion of @eq-equation-chap2-1, pg. 3[^footnote-chapter5-1] for an eq. pt. Adding these inequalities, using the linearity of $p_j(s_1, \ldots, s_n)$ in $S_i$, and dividing by $2$, we get $p_j(\symscr{t}; s_i^{*}) \geq p_j(\symscr{t}; s_i^{*}; r_j)$ since $s_i^{*} = \frac{(s_i + s_i')}{2}$. From this we know that $(\symscr{t}; s_i^{*})$ is an eq. pt. for any $t \in \symscr{S}$. If the set of all such eq. pts. $(\symscr{t}; s_i^{*})$ is added to $\symscr{S}$ the augmented set clearly satisfies condition @eq-equation-chap5-1, and since $\symscr{S}$ was to be maximal it follows that $s_i^{*} \in S_i$.
+
+To attack (b) note that the n-tuple $(\symscr{t}; s_i^{\#})$, where $\symscr{t} \in \symscr{S}$ will be a limit point of the set of n-tuples of the form $(\symscr{t}; s_i)$ where $s_i \in S_i$, since $s_i^{\#}$ is a limit point of $S_i$. But this set is a set of eq. pts. and hence any point in its closure is an eq. pt., since the set of all eq. pts. is closed \[see pg. 4\]. Therefore $(\symscr{t}; s_i^{\#})$ is an eq. pt. and hence $s_i ^{\#} \in S_i$ from the same argument as for $s_i^{*}$.
+:::
+
+[^footnote-chapter5-1]: The reference to "pg. 3" in the original manuscrupt has been updated to "pg. 4" to match this this [Quarto](https://quarto.org/) version.
+
+::: {#def-values}
+## Values
+
+Let $\symscr{S}$ be the set of equilibrium points of a game. We define 
+
+$$
+v_i^{+} = \max_{\symscr{s} \in \symscr{S}} [p_i(\symscr{s})] \text{ , } v_i^{-} = \min_{\symscr{s} \in \symscr{S}} [p_i(\symscr{s})] .
+$$ 
+
+If $v_i^{+} = v_i^{-}$ we write $v_i = v_i^{+} = v_i^{-}$. $v_i^{+}$ is the [upper value]{.underline} to player $i$ of the game; $v_i^{-}$ the [lower value]{.underline}; and $v_i$ the [value]{.underline}, if it exists.
+
+Values will obviously have to exist if there is but one equilibrium point.
+:::
+
+One can define [associated values]{.underline} for a sub-solution by restricting $\symscr{S}$ to the eq. pts. in the sub-solution and then using the same defining equations as above. 
+
+A two-person zero-sum game is always solvable in the sense defined above. The sets of equilibrium strategies $S_1$ and $S_2$ are simply the sets of "good" strategies. Such a game is not generally strongly solvable; strong solutions exist only when there is a "saddle point" in [pure]{.underline} strategies.
+
+## Simple examples {.unnumbered .unlisted}
+
+These are intended to illustrate the concepts defined in the paper and display special phenomena which occur in the game.
+
+The first player has the roman letter strategies and the pay-off to the left, etc.
+
+::: {#exm-example-chap5-1}
+$\begin{array}{rcrl}
+5 & a\alpha & -3 & \text{Weak Solution: } \left( \frac{9}{16}a + \frac{7}{16}b, \frac{7}{17}\alpha + \frac{10}{17}\beta \right) \\
+-4 & a\beta & 4 & \\
+-5 & b\alpha & \phantom{-1}5 & v_1 = -\frac{5}{17}, v_2 = +\frac{1}{2} \\
+\phantom{1}3 & b\beta & -4 &  
+\end{array}$
+:::
+
+::: {#exm-example-chap5-2}
+$\begin{array}{rcrl}
+1 & a\alpha & 1 & \text{Strong Solution: } (b, \beta) \\
+-10 & a\beta & 10 & \\
+10 & b\alpha & -10 & v_1 = v_2 = -1 \\
+-1 & b\beta & 1 &  
+\end{array}$
+:::
+
+::: {#exm-example-chap5-3}
+$\begin{array}{rcrl}
+1 & a\alpha & 1 & \text{Unsolvable; equilibrium points } (a, \alpha), \\
+-10 & a\beta & -10 & (b, \beta) \text{ and } \left( \frac{a}{2} + \frac{b}{2}, \frac{\alpha}{2} + \frac{\beta}{2} \right). \\
+-10 & b\alpha & -10 & \text{The strategies in the last case have} \\
+1 & b\beta & 1 & \text{maxi-min and mini-max properties.}   
+\end{array}$
+:::
+
+::: {#exm-example-chap5-4}
+$\begin{array}{rcrl}
+1 & a\alpha & 1 & \text{Strong Solution: all pairs of mixed} \\
+0 & a\beta & 1 & \text{strategies} \\
+1 & b\alpha & \phantom{-1}0 & v_1^{+} = v_2^{+} = 1, v_1^{-} = v_2^{-} = 0 \\
+\phantom{-1}0 & b\beta & 0 &  
+\end{array}$
+:::
+
+::: {#exm-example-chap5-5}
+$\begin{array}{rcrl}
+1 & a\alpha & 2 & \text{Unsolvable; eq. pts. } (a, \alpha), (b, \beta), \\
+-1 & a\beta & -4 & \text{and } \left( \frac{1}{4}a + \frac{3}{4}b, \frac{3}{8}\alpha + \frac{5}{8}\beta \right). \text{ However}, \\
+-4 & b\alpha & -1 &  \text{empirical tests show a tendency} \\
+\phantom{-1}2 & b\beta & \phantom{-1}1 & \text{toward } (a, \alpha).  
+\end{array}$
+:::
+
+::: {#exm-example-chap5-6}
+$\begin{array}{rcrl}
+1 & a\alpha & 1 & \text{Eq. pts.: } (a, \alpha) \text{ and } (b, \beta), \text{ with} \\
+0 & a\beta & 0 & (b, \beta) \text{ an example of instability}. \\
+0 & b\alpha & \phantom{-1}0 & \\
+\phantom{-1}0 & b\beta & 0 &  
+\end{array}$
+:::
