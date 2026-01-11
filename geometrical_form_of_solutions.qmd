@@ -1,1 +1,31 @@
 # Geometrical Form of Solutions
+
+In the two-person zero-sum case it has been shown that the set of "good" strategies of a player is a convex polyhedral subset of his strategy space. We shall obtain the same result for a player's set of equilibrium strategies in any solvable game.
+
+::: {#thm-sets-equilibrium-strategies-polyhedral-convex-subsets}
+The sets $S_1, S_2, \ldots, S_n$ of equilibrium strategies in a solvable game are polyhedral convex subsets of the respective mixed strategy spaces.
+:::
+
+::: {.proof}
+An n-tuple $\symscr{s}$ will be an equilibrium point if and only if for every $i$ 
+
+$$
+p_i(\symscr{s}) = \max_{\alpha} p_{i\alpha}(\symscr{s})
+$$ {#eq-equation-chap6-1}
+
+which is condition @eq-equation-chap2-3 on page 4. An equivalent condition is for every $i$ and $\alpha$ 
+    
+$$
+p_i(\symscr{s}) - p_{i\alpha}(\symscr{s}) \geq 0.
+$$ {#eq-equation-chap6-2}
+
+Let us now consider the form of the set $S_j$ of the equilibrium strategies, $s_j$, of player $j$. Let $\symscr{t}$ be any equilibrium point, then $(\symscr{t}; s_j)$ will be an equilibrium point if and only if $s_j \in S_j$, from @thm-sub-solution-factor-set. We now apply condition @eq-equation-chap6-2 to $(\symscr{t}; S_j)$, obtaining
+    
+$$
+s_j \in S_j \iff \text{for all } i,\alpha \quad p_i(\symscr{t}; s_j) - p_{i\alpha}(\symscr{t}; s_j) \geq 0.
+$$ {#eq-equation-chap6-3}
+    
+Since $p_i$ is n-linear and $\symscr{t}$ is constant these are a set of linear inequalities of the form $F_{i\alpha}(s_j) \geq 0$. Each such inequality is either satisfied for all $s_j$ or for those lying on and to one side of some hyperplane passing through the strategy simplex. Therefore, the complete set \[which is finite\] of conditions will all be satisfied simultaneously on some convex polyhedral subset of player $j$'s strategy simplex. \[Intersection of half-spaces.\]
+
+As a corollary we may conclude that $S_k$ is the convex closure of a finite set of mixed strategies \[vertices\].
+:::
