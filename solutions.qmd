@@ -31,7 +31,7 @@ and then $\symscr{S}$ is called a [strong solution]{.underline}.
 ::: {#def-equilibrium-strategies}
 ## Equilibrium Strategies
 
-In a solvable game set $S_i$ be the set of all mixed strategies $s_i$ such that for some $\symscr{t}$ the n-tuple $(\symscr{t}; s_i)$ is an equilibrium point. \[$s_i$ is the $i^{th}$ component of some equilibrium point.\] We call $S_i$ the set of [equilibrium strategies]{.underline} of player $i$.
+In a solvable game let $S_i$ be the set of all mixed strategies $s_i$ such that for some $\symscr{t}$ the n-tuple $(\symscr{t}; s_i)$ is an equilibrium point. \[$s_i$ is the $i^{th}$ component of some equilibrium point.\] We call $S_i$ the set of [equilibrium strategies]{.underline} of player $i$.
 :::
 
 ::: {#def-sub-solutions}
@@ -49,7 +49,7 @@ A sub-solution, $\symscr{S}$, is the set of all n-tuples $(s_1,s_2, \ldots, s_n)
 :::
 
 ::: {.proof}
-Consider such an n-tuple $(s_1, \ldots, s_n)$. By definition $\exists \symscr{t}_1, \symscr{t}_2, \ldots, \symscr{t}_n$ such that for each $i$ $(\symscr{t}_i; s_i) \in \symscr{S}$. Using the condition @eq-equation-chap5-1 n-1 times we obtain successively $(\mathcal{t}_1; s_1; s_2) \in \symscr{S}, \ldots, (\symscr{t}_1; s_1; s_2; s_3; \ldots; s_n) \in \symscr{S}$ and the last is simply $(s_1, s_2, \ldots, s_n) \in \symscr{S}$, which we needed to show.
+Consider such an n-tuple $(s_1, \ldots, s_n)$. By definition $\exists \symscr{t}_1, \symscr{t}_2, \ldots, \symscr{t}_n$ such that for each $i$ $(\symscr{t}_i; s_i) \in \symscr{S}$. Using the condition @eq-equation-chap5-1 n-1 times we obtain successively $(\symscr{t}_1; s_1; s_2) \in \symscr{S}, \ldots, (\symscr{t}_1; s_1; s_2; s_3; \ldots; s_n) \in \symscr{S}$ and the last is simply $(s_1, s_2, \ldots, s_n) \in \symscr{S}$, which we needed to show.
 :::
 
 ::: {#thm-factor-sets-closed-convex}
@@ -62,12 +62,12 @@ It suffices to show two things:
 (a) if $s_i$ and $s_i' \in S_i$ then $s_i^{*} = \frac{(s_i + s_i')}{2} \in S_i$; 
 (b) if $s_i^{\#}$ is a limit point of $S_i$ then $s_i^{\#} \in S_i$.
 
-Let $\symscr{t} \in \symscr{S}$. Then we have $p_j(\symscr{t};s_i) \geq p_j(\symscr{t}; s_i; r_j)$ and $p_j(\symscr{t}; s_i) \geq p_j(\symscr{t}; s_i'; r_j)$ for any $r_j$, by using the criterion of @eq-equation-chap2-1, pg. 3[^footnote-chapter5-1] for an eq. pt. Adding these inequalities, using the linearity of $p_j(s_1, \ldots, s_n)$ in $S_i$, and dividing by $2$, we get $p_j(\symscr{t}; s_i^{*}) \geq p_j(\symscr{t}; s_i^{*}; r_j)$ since $s_i^{*} = \frac{(s_i + s_i')}{2}$. From this we know that $(\symscr{t}; s_i^{*})$ is an eq. pt. for any $t \in \symscr{S}$. If the set of all such eq. pts. $(\symscr{t}; s_i^{*})$ is added to $\symscr{S}$ the augmented set clearly satisfies condition @eq-equation-chap5-1, and since $\symscr{S}$ was to be maximal it follows that $s_i^{*} \in S_i$.
+Let $\symscr{t} \in \symscr{S}$. Then we have $p_j(\symscr{t};s_i) \geq p_j(\symscr{t}; s_i; r_j)$ and $p_j(\symscr{t}; s_i) \geq p_j(\symscr{t}; s_i'; r_j)$  for any $r_j$, by using the criterion of @eq-equation-chap2-1, pg. 4[^footnote-chapter5-1] for an eq. pt. Adding these inequalities, using the linearity of $p_j(s_1, \ldots, s_n)$ in $S_i$, and dividing by $2$, we get $p_j(\symscr{t}; s_i^{*}) \geq p_j(\symscr{t}; s_i^{*}; r_j)$ since $s_i^{*} = \frac{(s_i + s_i')}{2}$. From this we know that $(\symscr{t}; s_i^{*})$ is an eq. pt. for any $\symscr{t} \in \symscr{S}$. If the set of all such eq. pts. $(\symscr{t}; s_i^{*})$ is added to $\symscr{S}$ the augmented set clearly satisfies condition @eq-equation-chap5-1, and since $\symscr{S}$ was to be maximal it follows that $s_i^{*} \in S_i$.
 
 To attack (b) note that the n-tuple $(\symscr{t}; s_i^{\#})$, where $\symscr{t} \in \symscr{S}$ will be a limit point of the set of n-tuples of the form $(\symscr{t}; s_i)$ where $s_i \in S_i$, since $s_i^{\#}$ is a limit point of $S_i$. But this set is a set of eq. pts. and hence any point in its closure is an eq. pt., since the set of all eq. pts. is closed \[see pg. 4\]. Therefore $(\symscr{t}; s_i^{\#})$ is an eq. pt. and hence $s_i ^{\#} \in S_i$ from the same argument as for $s_i^{*}$.
 :::
 
-[^footnote-chapter5-1]: The reference to "pg. 3" in the original manuscrupt has been updated to "pg. 4" to match this this [Quarto](https://quarto.org/) version.
+[^footnote-chapter5-1]: The reference to "pg. 3" in the original manuscript has been updated to "pg. 4" to match this [Quarto](https://quarto.org/) version.
 
 ::: {#def-values}
 ## Values
@@ -75,8 +75,8 @@ To attack (b) note that the n-tuple $(\symscr{t}; s_i^{\#})$, where $\symscr{t} 
 Let $\symscr{S}$ be the set of equilibrium points of a game. We define 
 
 $$
-v_i^{+} = \max_{\symscr{s} \in \symscr{S}} [p_i(\symscr{s})] \text{ , } v_i^{-} = \min_{\symscr{s} \in \symscr{S}} [p_i(\symscr{s})] .
-$$ 
+v_i^{+} = \max_{\symscr{s} \in \symscr{S}} [p_i(\symscr{s})] \text{ , } v_i^{-} = \min_{\symscr{s} \in \symscr{S}} [p_i(\symscr{s})].
+$$
 
 If $v_i^{+} = v_i^{-}$ we write $v_i = v_i^{+} = v_i^{-}$. $v_i^{+}$ is the [upper value]{.underline} to player $i$ of the game; $v_i^{-}$ the [lower value]{.underline}; and $v_i$ the [value]{.underline}, if it exists.
 
@@ -89,7 +89,7 @@ A two-person zero-sum game is always solvable in the sense defined above. The se
 
 ## Simple examples {.unnumbered .unlisted}
 
-These are intended to illustrate the concepts defined in the paper and display special phenomena which occur in the game.
+These are intended to illustrate the concepts defined in the paper and display special phenomena which occur in these games.
 
 The first player has the roman letter strategies and the pay-off to the left, etc.
 
@@ -98,7 +98,7 @@ $\begin{array}{rcrl}
 5 & a\alpha & -3 & \text{Weak Solution: } \left( \frac{9}{16}a + \frac{7}{16}b, \frac{7}{17}\alpha + \frac{10}{17}\beta \right) \\
 -4 & a\beta & 4 & \\
 -5 & b\alpha & \phantom{-1}5 & v_1 = -\frac{5}{17}, v_2 = +\frac{1}{2} \\
-\phantom{1}3 & b\beta & -4 &  
+\phantom{-1}3 & b\beta & -4 &  
 \end{array}$
 :::
 
@@ -107,7 +107,7 @@ $\begin{array}{rcrl}
 1 & a\alpha & 1 & \text{Strong Solution: } (b, \beta) \\
 -10 & a\beta & 10 & \\
 10 & b\alpha & -10 & v_1 = v_2 = -1 \\
--1 & b\beta & 1 &  
+-1 & b\beta & -1 &
 \end{array}$
 :::
 
@@ -131,7 +131,7 @@ $\begin{array}{rcrl}
 
 ::: {#exm-example-chap5-5}
 $\begin{array}{rcrl}
-1 & a\alpha & 2 & \text{Unsolvable; eq. pts. } (a, \alpha), (b, \beta), \\
+1 & a\alpha & 2 & \text{Unsolvable; eq. pts. } (a, \alpha), (b, \beta) \\
 -1 & a\beta & -4 & \text{and } \left( \frac{1}{4}a + \frac{3}{4}b, \frac{3}{8}\alpha + \frac{5}{8}\beta \right). \text{ However}, \\
 -4 & b\alpha & -1 &  \text{empirical tests show a tendency} \\
 \phantom{-1}2 & b\beta & \phantom{-1}1 & \text{toward } (a, \alpha).  
