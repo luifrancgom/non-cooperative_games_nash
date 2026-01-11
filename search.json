@@ -80,13 +80,43 @@
     ]
   },
   {
+    "objectID": "solutions.html",
+    "href": "solutions.html",
+    "title": "5  Solutions",
+    "section": "",
+    "text": "Simple examples\nWe define here solutions, strong solutions, and sub-solutions. A non-cooperative game does not always have a solution, but when it does the solution is unique. Strong solutions are solutions with special properties. Sub-solutions always exist and have many of the properties of solutions, but lack uniqueness.\n\\(S_i\\) will denote a set of mixed strategies of player \\(i\\) and \\(\\symscr{S}\\) a set of n-tuples of mixed strategies.\nThis is called the interchangeability condition. The solution of a solvable game is its set, \\(\\symscr{S}\\), of equilibrium points.\nFor any sub-solution \\(\\symscr{S}\\) we define the \\(i^{th}\\) factor set, \\(S_i\\), as the set of all \\(s_i\\)’s such that \\(\\symscr{S}\\) contains \\((\\symscr{t}; s_i)\\) for some \\(\\symscr{t}\\).\nNote that a sub-solution, when unique, is a solution; and its factor sets are the sets of equilibrium strategies.\nOne can define associated values for a sub-solution by restricting \\(\\symscr{S}\\) to the eq. pts. in the sub-solution and then using the same defining equations as above.\nA two-person zero-sum game is always solvable in the sense defined above. The sets of equilibrium strategies \\(S_1\\) and \\(S_2\\) are simply the sets of “good” strategies. Such a game is not generally strongly solvable; strong solutions exist only when there is a “saddle point” in pure strategies.\nThese are intended to illustrate the concepts defined in the paper and display special phenomena which occur in the game.\nThe first player has the roman letter strategies and the pay-off to the left, etc.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Solutions</span>"
+    ]
+  },
+  {
+    "objectID": "solutions.html#simple-examples",
+    "href": "solutions.html#simple-examples",
+    "title": "5  Solutions",
+    "section": "",
+    "text": "Example 5.1 \\(\\begin{array}{rcrl}\n5 & a\\alpha & -3 & \\text{Weak Solution: } \\left( \\frac{9}{16}a + \\frac{7}{16}b, \\frac{7}{17}\\alpha + \\frac{10}{17}\\beta \\right) \\\\\n-4 & a\\beta & 4 & \\\\\n-5 & b\\alpha & \\phantom{-1}5 & v_1 = -\\frac{5}{17}, v_2 = +\\frac{1}{2} \\\\\n\\phantom{1}3 & b\\beta & -4 &\n\\end{array}\\)\n\n\nExample 5.2 \\(\\begin{array}{rcrl}\n1 & a\\alpha & 1 & \\text{Strong Solution: } (b, \\beta) \\\\\n-10 & a\\beta & 10 & \\\\\n10 & b\\alpha & -10 & v_1 = v_2 = -1 \\\\\n-1 & b\\beta & 1 &\n\\end{array}\\)\n\n\nExample 5.3 \\(\\begin{array}{rcrl}\n1 & a\\alpha & 1 & \\text{Unsolvable; equilibrium points } (a, \\alpha), \\\\\n-10 & a\\beta & -10 & (b, \\beta) \\text{ and } \\left( \\frac{a}{2} + \\frac{b}{2}, \\frac{\\alpha}{2} + \\frac{\\beta}{2} \\right). \\\\\n-10 & b\\alpha & -10 & \\text{The strategies in the last case have} \\\\\n1 & b\\beta & 1 & \\text{maxi-min and mini-max properties.}\n\\end{array}\\)\n\n\nExample 5.4 \\(\\begin{array}{rcrl}\n1 & a\\alpha & 1 & \\text{Strong Solution: all pairs of mixed} \\\\\n0 & a\\beta & 1 & \\text{strategies} \\\\\n1 & b\\alpha & \\phantom{-1}0 & v_1^{+} = v_2^{+} = 1, v_1^{-} = v_2^{-} = 0 \\\\\n\\phantom{-1}0 & b\\beta & 0 &\n\\end{array}\\)\n\n\nExample 5.5 \\(\\begin{array}{rcrl}\n1 & a\\alpha & 2 & \\text{Unsolvable; eq. pts. } (a, \\alpha), (b, \\beta), \\\\\n-1 & a\\beta & -4 & \\text{and } \\left( \\frac{1}{4}a + \\frac{3}{4}b, \\frac{3}{8}\\alpha + \\frac{5}{8}\\beta \\right). \\text{ However}, \\\\\n-4 & b\\alpha & -1 &  \\text{empirical tests show a tendency} \\\\\n\\phantom{-1}2 & b\\beta & \\phantom{-1}1 & \\text{toward } (a, \\alpha).\n\\end{array}\\)\n\n\nExample 5.6 \\(\\begin{array}{rcrl}\n1 & a\\alpha & 1 & \\text{Eq. pts.: } (a, \\alpha) \\text{ and } (b, \\beta), \\text{ with} \\\\\n0 & a\\beta & 0 & (b, \\beta) \\text{ an example of instability}. \\\\\n0 & b\\alpha & \\phantom{-1}0 & \\\\\n\\phantom{-1}0 & b\\beta & 0 &\n\\end{array}\\)",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Solutions</span>"
+    ]
+  },
+  {
+    "objectID": "solutions.html#footnotes",
+    "href": "solutions.html#footnotes",
+    "title": "5  Solutions",
+    "section": "",
+    "text": "The reference to “pg. 3” in the original manuscrupt has been updated to “pg. 4” to match this this Quarto version.↩︎",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Solutions</span>"
+    ]
+  },
+  {
     "objectID": "applications.html",
     "href": "applications.html",
-    "title": "5  Applications",
+    "title": "6  Applications",
     "section": "",
     "text": "The study of n-person games for which the accepted ethics of fair play imply non-cooperative playing is, of course, an obvious direction in which to apply this theory. And poker is the most obvious target. The analysis of a more realistic poker game than our very simple model should be quite an interesting affair.\nThe complexity of the mathematical work needed for a complete investigation increases rather rapidly, however, with increasing complexity of the game; so that it seems that analysis of a game much more complex than the example given here would only be feasible using approximate computational methods.\nA less obvious type of application is the study of cooperative games. By a cooperative game we mean a situation involving a set of players, pure strategies, and pay-offs as usual; but with the assumption that the players can and will collaborate as they do in the von Neumann and Morgenstern theory. This means the players may communicate and form coalitions which will be enforced by an umpire. It is unnecessarily restrictive, however, to assume any transferability, or even comparability of the pay-offs [which should be in utility units] to different players. Any desired transferability can be put into the game itself instead of assuming it possible in the extra-game collaboration.\nThe writer has developed a “dynamical” approach to the study of cooperative games based upon reduction to non-cooperative form. One proceeds by constructing a model of the pre-play negotiation so that the steps of negotiation become moves in a larger non-cooperative game [which will have an infinity of pure strategies] describing the total situation.\nThis larger game is then treated in terms of the theory of this paper [extended to infinite games] and if values are obtained they are taken as the values of the cooperative game. Thus the problem analyzing a cooperative game becomes the problem of obtaining a suitable, and convincing, non-cooperative model for the negotiation.\nThe writer has, by such a treatment, obtained values for all finite two person cooperative games, and some special n-person games.",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Applications</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Applications</span>"
     ]
   },
   {
@@ -102,11 +132,11 @@
   {
     "objectID": "acknowledgements.html",
     "href": "acknowledgements.html",
-    "title": "6  Acknowledgements",
+    "title": "7  Acknowledgements",
     "section": "",
     "text": "Drs. Tucker, Gale, and Zuhn gave valuable criticism and suggestions for improving the exposition of the material in this paper. David Gale suggested the investigation of symmetric games. The solution of the Poker model was a joint project undertaken by Lloyd S. Shapley and the author. Finally, the author was sustained financially by the Atomic Energy Commission in the period 1949-50 during which this work was done.",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Acknowledgements</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Acknowledgements</span>"
     ]
   }
 ]
