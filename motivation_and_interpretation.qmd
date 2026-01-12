@@ -1,1 +1,47 @@
 # Motivation and Interpretation
+
+In this section we shall try to explain the significance of the concepts introduced in this paper. That is, we shall try to show how equilibrium points and solutions can be connected with observable phenomena.
+
+The basic requirements for a non-cooperative game is that there should be no pre-play communication among the players \[unless it has no bearing on the game\]. Thus, by implication, there are no coalitions and no side-payments. Because there is no extra-game utility \[pay-off\] transfer, the pay-offs of different players are effectively incomparable; if we transform the pay-off functions linearly: $p_i' = a_ip_i + b_i$, where $a_i > 0$ the game will be essentially the same. Note that equilibrium points are preserved under such transformations.
+
+We shall now take up the "mass-action" interpretation of equilibrium points. In this interpretation solutions have no great significance. It is unnecessary to assume that the participants have full knowledge of the total structure of the game, or the ability and inclination to go through any complex reasoning processes. But the participants are supposed to accumulate empirical information on the relative advantages of the various pure strategies at their disposal.
+
+To be more detailed, we assume that there is a population \[in the sense of statistics\] of participants for each position of the game. Let us also assume that the "average playing" of the game involves n participants selected at random from the n populations, and that there is a stable average frequency with which each pure strategy is employed by the "average member" of the appropriate population.
+
+Since there is to be no collaboration between individuals playing in different positions of the game, the probability that a particular n-tuple of pure strategies will be employed in a playing of the game should be the product of the probabilities indicating the chance of each of the n pure strategies to be employed in a random playing.
+
+Let the probability that $\pi_{i\alpha}$ will be employed in a random playing of the game be $c_{i\alpha}$, and let $s_i = \sum_{\alpha} c_{i\alpha} \pi_{i\alpha}$, $\symscr{s} = (s_1, s_2, \ldots, s_n)$. Then the expected pay-off to an individual playing in the $i^{th}$ position of the game and employing the pure strategy $\pi_{i\alpha}$ is $p_i(\symscr{s}; \pi_{i\alpha}) = p_{i\alpha}(\symscr{s})$.
+
+Now let us consider what effects the experience of the participants will produce. To assume, as we did, that they accumulated empirical evidence on the pure strategies at their disposal is to assume that those playing in position $i$ learn the numbers $p_{i\alpha}(\symscr{s})$. But if they know these they will employ only optimal pure strategies, i.e, those pure strategies $\pi_{i\alpha}$ such that 
+
+$$
+p_{i\alpha}(\symscr{s}) = \max_{\beta} p_{i\beta}(\symscr{s}).
+$$
+
+Consequently since $s_i$ expresses their behavior $s_i$ attaches positive coefficients only to optimal pure strategies, so that
+
+$$
+\pi_{i\alpha} \text{ is used in } s_i \implies p_{i\alpha}(\symscr{s}) = \max_{\beta} p_{i\beta}(\symscr{s}).
+$$
+
+But this is simply a condition for $\symscr{s}$ to be an equilibrium point. \[see @eq-equation-chap2-4, pg. 4\]
+
+Thus the assumptions we made in this "mass-action" interpretation lead to the conclusion that the mixed strategies representing the average behavior in each of the populations form an equilibrium point.
+
+The populations need not be large if the assumptions still *make it: ... \[?\]ill hold*[^footnote-chapter9-1]. There are situations in economics or international politics in which, effectively, a group of interests are involved in a non-cooperative game without being aware of it; the non-awareness helping to make the situation truly non-cooperative.
+
+[^footnote-chapter9-1]: The phrase *make it: ... \[?\]ill hold* is partially erased in the original manuscript and the bracketed question mark *\[?\]* is used to denote character(s) that are illegible.
+
+Actually, of course, we can only expect some sort of approximate equilibrium, since the information, its utilization, and the stability of the average frequencies will be imperfect.
+
+We now sketch another interpretation, one in which solutions play a major role, and which is applicable to a game played but once.
+
+We proceed by investigating the question: what would be a "rational" prediction of the behavior to be expected of rational playing the game in question? By using the principles that a rational prediction should be unique, that the players should be able to deduce and make use of it, and that such knowledge on the part of each player of what to expect the others to do should not lead him to act out of conformity with the prediction, one is led to the concept of a solution defined before.
+
+If $S_1, S_2, \ldots, S_n$ were the sets of equilibrium strategies of a solvable game, the "rational" prediction should be: "The average behavior of rational men playing in position $i$ would define a mixed strategy $s_i$ in $S_i$ if an experiment were carried out."
+
+In this interpretation we need to assume the players know the full structure of the game in order to be able to deduce the prediction for themselves. It is quite strongly a rationalistic and idealizing interpretation.
+
+In an unsolvable game it sometimes happens that good heuristic reasons can be found for narrowing down the set of equilibrium points to those in a single sub-solution, which then plays the role of a solution.
+
+In general a sub-solution may be looked at as a set of mutually compatible equilibrium points, forming a coherent whole. The sub-solutions appear to give a natural subdivision of the set of equilibrium points of a game.
