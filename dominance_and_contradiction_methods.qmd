@@ -1,1 +1,21 @@
 # Dominance and Contradiction Methods
+
+We say that $s_i'$ [dominates]{.underline} $s_i$ if $p_i(\symscr{t}; s_i') > p_i(\symscr{t}; s_i)$ for every $\symscr{t}$.
+
+This amounts to saying that $s_i'$ gives player $i$ a higher pay-off than $s_i$ no matter what the strategies of the other players are. To see whether a strategy $s_i'$ dominates $s_i$ it suffices to consider only pure strategies for the other players because of the n-linearity of $p_i$.
+
+It is obvious from the definitions that [no equilibrium point can involve a dominated strategy $s_i$]{.underline}.
+
+The domination of one mixed strategy by another will always entail other dominations. For suppose $s_i'$ dominates $s_i$ and $t_i$ uses all of the pure strategies which have a higher coefficient in $s_i$ than in $s_i'$. Then for a small enough $p > 0$
+
+$$
+t_i' = t_i + p(s_i' - s_i)
+$$
+
+is a mixed strategy; and $t_i'$ dominates $t_i$ by linearity.
+
+One can prove a few properties of the set of undominated strategies. It is simply connected and is formed by the union of some collection of faces of the strategy simplex.
+
+The information obtained by discovering dominances for one player may be of relevance to the others, insofar as the elimination of classes of mixed strategies as possible components of an equilibrium point is concerned. For the $\symscr{t}$'s whose components are all undominated are all that need be considered and this eliminating some of the strategies of one player may make possible the elimination of a new class of strategies for another player.
+
+Another procedure which may be used in locating equilibrium points is the contradiction-type analysis. Here one assumes that an equilibrium point exists having component strategies lying within certain regions of the strategy spaces and proceeds to deduce further conditions which must be satisfied if the hypothesis is true. This sort of reasoning may be carried through several stages to eventually obtain a contradiction indicating that there is no equilibrium point satisfying the initial hypothesis.
