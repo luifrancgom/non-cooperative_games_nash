@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>2&nbsp; Formal Definitions and Terminology – Non-Cooperative Games</title>
+<title>7&nbsp; Dominance and Contradiction Methods – Non-Cooperative Games</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./existence_of_equilibrium_points.html" rel="next">
-<link href="./introduction.html" rel="prev">
+<link href="./applications.html" rel="next">
+<link href="./geometrical_form_of_solutions.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -112,7 +112,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./formal_definitions_and_terminology.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Formal Definitions and Terminology</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./dominance_and_contradiction_methods.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Dominance and Contradiction Methods</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -160,7 +160,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./formal_definitions_and_terminology.html" class="sidebar-item-text sidebar-link active">
+  <a href="./formal_definitions_and_terminology.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Formal Definitions and Terminology</span></span></a>
   </div>
 </li>
@@ -190,7 +190,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dominance_and_contradiction_methods.html" class="sidebar-item-text sidebar-link">
+  <a href="./dominance_and_contradiction_methods.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Dominance and Contradiction Methods</span></span></a>
   </div>
 </li>
@@ -225,7 +225,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Formal Definitions and Terminology</span></h1>
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Dominance and Contradiction Methods</span></h1>
 </div>
 
 
@@ -242,52 +242,19 @@ window.Quarto = {
 </header>
 
 
-<p>In this section we define the basic concepts of this paper and set up standard terminology and notation. Important definitions will be preceded<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> by a subtitle<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> indicating the concept defined<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>. The non-cooperative idea will be implicit, rather than explicit, below.</p>
-<div id="def-finite-game" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2.1 (Finite Game)</strong></span> For us an <u>n-person game</u> will be a set of n <u>players</u>, or <u>positions</u>, each with an associated finite set of <u>pure strategies</u>; and corresponding to each player, <span class="math inline">\(i\)</span>, a <u>pay-off function</u>, <span class="math inline">\(p_i\)</span>, which maps the set of all n-tuples of pure strategies into the real numbers. When we use the term <u>n-tuple</u> we shall always mean a set of n items, with each item associated with a different player.</p>
-</div>
-<div id="def-mixed-strategy" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2.2 (Mixed Strategy, <span class="math inline">\(s_i\)</span>)</strong></span> A <u>mixed strategy</u> of player <span class="math inline">\(i\)</span> will be a collection of non-negative numbers which have unit sum and are in one to one correspondence with his pure strategies.</p>
-</div>
-<p>We write <span class="math inline">\(s_i=\sum_{\alpha} c_{i\alpha} \pi_{i\alpha}\)</span> with <span class="math inline">\(\sum_{\alpha } c_{i\alpha}=1\)</span> and <span class="math inline">\(c_{i\alpha} \geq 0\)</span> to represent such a mixed strategy, where the <span class="math inline">\(\pi_{i\alpha}\)</span>’s are the pure strategies of player <span class="math inline">\(i\)</span>. We regard the <span class="math inline">\(s_i\)</span>’s as points in a simplex whose vertices are the <span class="math inline">\(\pi_{i\alpha}\)</span>’s. This simplex may be regarded as a convex subset of a real vector space, giving us a natural process of linear combination for the mixed strategies.</p>
-<p>We shall use the suffixes <span class="math inline">\(i,j,k\)</span> for players and <span class="math inline">\(\alpha ,\beta ,\gamma\)</span> to indicate various pure strategies of a player. The symbols <span class="math inline">\(s_i, t_i\)</span> and <span class="math inline">\(r_i\)</span>, etc.&nbsp;will indicate mixed strategies; <span class="math inline">\(\pi_{i\alpha}\)</span> will indicate the <span class="math inline">\(i^{th}\)</span> player’s <span class="math inline">\(\alpha^{th}\)</span> pure strategy, etc.</p>
-<div id="def-pay-off-function" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2.3 (Pay-off-function, <span class="math inline">\(p_i\)</span>)</strong></span> The pay-off function, <span class="math inline">\(p_i\)</span>, used in the definition of a finite game above, has a unique extension to the n-tuples of mixed strategies which is linear in the mixed strategy of each player [n-linear]. This extension we shall also denote by <span class="math inline">\(p_i\)</span>, writing <span class="math inline">\(p_i(s_1, s_2, \cdots, s_n)\)</span>.</p>
-</div>
-<p>We shall write <span class="math inline">\(\symscr{s}\)</span> or <span class="math inline">\(\symscr{t}\)</span> to denote an n-tuple of mixed strategies and if <span class="math inline">\(\symscr{s} = (s_1, \cdots,s_n)\)</span> then <span class="math inline">\(p_i(\symscr{s})\)</span> shall mean <span class="math inline">\(p_i(s_1, s_2, \cdots, s_n)\)</span>. Such an n-tuple, <span class="math inline">\(\symscr{s}\)</span>, will also be regarded as a point in a vector space, which space could be obtained by multiplying together the vector spaces containing the mixed strategies. And the set of all such n-tuples forms, of course, a convex polytope, the product of the simplices representing the mixed strategies.</p>
-<p>For convenience we introduce the substitution notation <span class="math inline">\((\symscr{s}; t_i)\)</span> to stand for <span class="math inline">\((s_1, s_2, \cdots, s_{i-1}, t_i, s_{i+1}, \cdots, s_n)\)</span> where <span class="math inline">\(\symscr{s} = (s_1, s_2, \cdots, s_n)\)</span>. The effect of successive substitutions <span class="math inline">\(((\symscr{s}; t_i); r_j)\)</span> we indicate by <span class="math inline">\((\symscr{s}; t_i; r_j)\)</span>, etc.</p>
-<div id="def-equilibrium-point" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2.4 (Equilibrium point)</strong></span> An n-tuple <span class="math inline">\(\symscr{s}\)</span> is an <u>equilibrium point</u> if and only if for every <span class="math inline">\(i\)</span></p>
-<p><span id="eq-equation-chap2-1"><span class="math display">\[
-p_i(\symscr{s}) = \max_{\text{all } r_i\text{'s}} [p_i(\symscr{s}; r_i)].
-\tag{2.1}\]</span></span></p>
-</div>
-<p>Thus an equilibrium point is an n-tuple <span class="math inline">\(\symscr{s}\)</span> such that each player’s mixed strategy maximizes his pay-off if the strategies of the others are held fixed. Thus each player’s strategy is optimal against those of the others. We shall occasionally abbreviate equilibrium point by eq. pt.</p>
-<p>We say that a mixed strategy <span class="math inline">\(s_i\)</span> <u>uses</u> a pure strategy <span class="math inline">\(\pi_{i\beta}\)</span> if <span class="math inline">\(s_i = \sum_{\alpha} c_{i\alpha} \pi_{i\alpha}\)</span> and <span class="math inline">\(c_{i\beta}&gt;0\)</span>. If <span class="math inline">\(\symscr{s} = (s_1, s_2,\cdots, s_n)\)</span> and <span class="math inline">\(s_i\)</span> uses <span class="math inline">\(\pi_{i\alpha}\)</span> we also say that <span class="math inline">\(\symscr{s}\)</span> uses <span class="math inline">\(\pi_{i\alpha}\)</span>.</p>
-<p>From the linearity of <span class="math inline">\(p_i(s_1, \cdots, s_n)\)</span> in <span class="math inline">\(s_i\)</span>,</p>
-<p><span id="eq-equation-chap2-2"><span class="math display">\[
-\max_{\text{all } r_i\text{'s}} [p_i(\symscr{s}; r_i)] = \max_{\alpha} [p_i(\symscr{s}; \pi_{i\alpha})].
-\tag{2.2}\]</span></span></p>
-<p>We define <span class="math inline">\(p_{i\alpha}(\symscr{s}) = p_i(\symscr{s}; \pi_{i\alpha})\)</span>. Then we obtain the following trivial necessary and sufficient condition for <span class="math inline">\(\symscr{s}\)</span> to be an equilibrium point:</p>
-<p><span id="eq-equation-chap2-3"><span class="math display">\[
-p_i(\symscr{s}) = \max_{\alpha} p_{i\alpha}(\symscr{s}).
-\tag{2.3}\]</span></span></p>
-<p>If <span class="math inline">\(\symscr{s} = (s_1, s_2, \cdots, s_n )\)</span> and <span class="math inline">\(s_i = \sum_{\alpha } c_{i\alpha} \pi_{i\alpha}\)</span> then <span class="math inline">\(p_i(\symscr{s}) = \sum_{\alpha} c_{i\alpha} p_{i\alpha}(\symscr{s})\)</span>, consequently for <a href="#eq-equation-chap2-3" class="quarto-xref"><span>2.3</span></a> to hold we must have <span class="math inline">\(c_{i\alpha} = 0\)</span> whenever <span class="math inline">\(p_{i\alpha}(\symscr{s}) &lt; \max_{\beta} p_{i\beta}(\symscr{s})\)</span>, which is to say that <span class="math inline">\(\symscr{s}\)</span> does not use <span class="math inline">\(\pi_{i\alpha}\)</span> unless it is an optimal pure strategy for player <span class="math inline">\(i\)</span>. So we write</p>
-<p><span id="eq-equation-chap2-4"><span class="math display">\[
-\text{if } \pi_{i\alpha} \text{ is used in } \symscr{s} \text{ then } p_i(\symscr{s}) = \max_{\beta} p_{i\beta}(\symscr{s})  
-\tag{2.4}\]</span></span></p>
-<p>as another necessary and sufficient condition for an equilibrium point.</p>
-<p>Since a criterion <a href="#eq-equation-chap2-3" class="quarto-xref"><span>2.3</span></a> for an eq. pt.&nbsp;can be expressed as the equating of two continuous functions on the space of n-tuples <span class="math inline">\(\symscr{s}\)</span> the eq. pts. obviously form a closed subset of this space. Actually, this subset is formed from a number of pieces of algebraic varieties, cut out by other algebraic varieties.</p>
+<p>We say that <span class="math inline">\(s_i'\)</span> <u>dominates</u> <span class="math inline">\(s_i\)</span> if <span class="math inline">\(p_i(\symscr{t}; s_i') &gt; p_i(\symscr{t}; s_i)\)</span> for every <span class="math inline">\(\symscr{t}\)</span>.</p>
+<p>This amounts to saying that <span class="math inline">\(s_i'\)</span> gives player <span class="math inline">\(i\)</span> a higher pay-off than <span class="math inline">\(s_i\)</span> no matter what the strategies of the other players are. To see whether a strategy <span class="math inline">\(s_i'\)</span> dominates <span class="math inline">\(s_i\)</span> it suffices to consider only pure strategies for the other players because of the n-linearity of <span class="math inline">\(p_i\)</span>.</p>
+<p>It is obvious from the definitions that <u>no equilibrium point can involve a dominated strategy <span class="math inline">\(s_i\)</span></u>.</p>
+<p>The domination of one mixed strategy by another will always entail other dominations. For suppose <span class="math inline">\(s_i'\)</span> dominates <span class="math inline">\(s_i\)</span> and <span class="math inline">\(t_i\)</span> uses all of the pure strategies which have a higher coefficient in <span class="math inline">\(s_i\)</span> than in <span class="math inline">\(s_i'\)</span>. Then for a small enough <span class="math inline">\(p &gt; 0\)</span></p>
+<p><span class="math display">\[
+t_i' = t_i + p(s_i' - s_i)
+\]</span></p>
+<p>is a mixed strategy; and <span class="math inline">\(t_i'\)</span> dominates <span class="math inline">\(t_i\)</span> by linearity.</p>
+<p>One can prove a few properties of the set of undominated strategies. It is simply connected and is formed by the union of some collection of faces of the strategy simplex.</p>
+<p>The information obtained by discovering dominances for one player may be of relevance to the others, insofar as the elimination of classes of mixed strategies as possible components of an equilibrium point is concerned. For the <span class="math inline">\(\symscr{t}\)</span>’s whose components are all undominated are all that need be considered and this eliminating some of the strategies of one player may make possible the elimination of a new class of strategies for another player.</p>
+<p>Another procedure which may be used in locating equilibrium points is the contradiction-type analysis. Here one assumes that an equilibrium point exists having component strategies lying within certain regions of the strategy spaces and proceeds to deduce further conditions which must be satisfied if the hypothesis is true. This sort of reasoning may be carried through several stages to eventually obtain a contradiction indicating that there is no equilibrium point satisfying the initial hypothesis.</p>
 
 
-<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn1"><p>The original spelling “preceeded” has been updated to “preceded” in this <a href="https://quarto.org/">Quarto</a> version.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>The original hyphenated “sub-title” has been rendered as “subtitle” to improve readability in this <a href="https://quarto.org/">Quarto</a> version.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>Definitions are highlighted explicitly in this <a href="https://quarto.org/">Quarto</a> version.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -692,13 +659,13 @@ p_i(\symscr{s}) = \max_{\alpha} p_{i\alpha}(\symscr{s}).
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./introduction.html" class="pagination-link" aria-label="Introduction">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span>
+      <a href="./geometrical_form_of_solutions.html" class="pagination-link" aria-label="Geometrical Form of Solutions">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Geometrical Form of Solutions</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./existence_of_equilibrium_points.html" class="pagination-link" aria-label="Existence of Equilibrium Points">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Existence of Equilibrium Points</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./applications.html" class="pagination-link" aria-label="Applications">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Applications</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -707,4 +674,4 @@ p_i(\symscr{s}) = \max_{\alpha} p_{i\alpha}(\symscr{s}).
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/luifrancgom/non-cooperative_games_nash/edit/main/formal_definitions_and_terminology.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/luifrancgom/non-cooperative_games_nash/blob/main/formal_definitions_and_terminology.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/luifrancgom/non-cooperative_games_nash/issues" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/luifrancgom/non-cooperative_games_nash/edit/main/dominance_and_contradiction_methods.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/luifrancgom/non-cooperative_games_nash/blob/main/dominance_and_contradiction_methods.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/luifrancgom/non-cooperative_games_nash/issues" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
