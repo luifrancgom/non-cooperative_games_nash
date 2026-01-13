@@ -119,7 +119,8 @@ chap_8_tbl_2 |>
     column_labels.border.bottom.color = "black",
     table.border.bottom.style = "solid",
     table.border.bottom.width = px(3),
-    table.border.bottom.color = "black"
+    table.border.bottom.color = "black",
+    table.width = pct(67)
   )
 ```
 
@@ -154,7 +155,8 @@ chap_8_tbl_3 |>
     column_labels.border.bottom.color = "black",
     table.border.bottom.style = "solid",
     table.border.bottom.width = px(3),
-    table.border.bottom.color = "black"
+    table.border.bottom.color = "black",
+    table.width = pct(67)
   )
 ```
 
@@ -165,14 +167,14 @@ chap_8_tbl_3 |>
 
 inner_left_upper_grid <- paste0(
   "\\begin{array}{c|c} ",
-  "\\textnormal{high} & \\textnormal{low} \\\\ \\hline ",
-  "\\textnormal{bet}  & \\textnormal{pass} ",
+  "\\text{high} & \\text{low} \\\\ \\hline ",
+  "\\text{bet}  & \\text{pass} ",
   "\\end{array}"
 )
 
 inner_left_lower_grid <- paste0(
   "\\begin{array}{c|c}",
-  "\\textnormal{pass} & \\textnormal{pass}",
+  "\\text{pass} & \\text{pass}",
   "\\end{array}"
 )
 
