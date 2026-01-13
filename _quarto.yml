@@ -22,7 +22,7 @@ book:
     - solutions.qmd
     - geometrical_form_of_solutions.qmd
     - dominance_and_contradiction_methods.qmd
-    # - a_three-man_poker_game.qmd
+    - a_three-man_poker_game.qmd
     - motivation_and_interpretation.qmd
     - applications.qmd
     - references.qmd

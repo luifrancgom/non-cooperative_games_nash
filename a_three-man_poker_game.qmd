@@ -1,1 +1,222 @@
 # A Three-Man Poker Game
+
+```{r}
+#| label: libraries
+#| include: false
+
+library(gt)
+library(dplyr)
+```
+
+As an example of the application of our theory to a more or less realistic case we include the simplified poker game given below. The rules are as follows:
+
+(1) The deck is large, with equally many high and low cards, and a hand consists of one card.
+(2) Two chips are used to ante, open, or call.
+(3) The players play in rotation and the game ends after all have passed or after one player has opened and the others have had a chance to call.
+(4) If no one bets the antes are retrieved.
+(5) Otherwise the pot is divided equally among the highest hangs which have bet.
+
+We find it more satisfactory to treat the game in terms of quantities we call "behavior parameters" than in the normal form of "Theory of Games and Economic Behavior." In the normal form representation two mixed strategies of a player may be equivalent in the sense that each makes the individual choose each available course of action in each particular situation requiring action on his part with the same frequency. That is, they represent the same behavior pattern on the part of the individual.
+
+Behavior parameters give the probabilities of taking each of the various possible actions in each of the various possible situations which may arise. Thus they describe behavior patterns. 
+
+In terms of behavior parameters the strategies of the players may be represented as follows, assuming that since there is no point in passing with a [high]{.underline} card at one's last opportunity to bet that this will not be done. The greek letters are the probabilities of the various acts (See @tbl-chapter-8-table-1).
+
+```{r}
+#| label: tbl-chapter-8-table-1
+#| echo: false
+#| tbl-pos: "H"
+
+chap_8_tbl_1 <- tibble(
+  player = c("$I$", "$II$", "$III$"),
+  first_moves = c(
+    "$\\alpha$ Open on $\\underline{\\text{high}}$\n\n$\\beta$ Open on $\\underline{\\text{low}}$",
+    "$\\gamma$ Call $I$ on $\\underline{\\text{low}}$\n\n$\\delta$ Open on $\\underline{\\text{high}}$\n\n$\\epsilon$ Open on $\\underline{\\text{low}}$",
+    "$\\zeta$ Call $I$ and $II$ on $\\underline{\\text{low}}$\n\n$\\eta$ Open on $\\underline{\\text{low}}$\n\n$\\theta$ Call $I$ on $\\underline{\\text{low}}$\n\n$\\iota$ Call $II$ on $\\underline{\\text{low}}$"
+  ),
+  second_moves = c(
+    "$\\kappa$ Call $III$ on $\\underline{\\text{low}}$\n\n$\\lambda$ Call $II$ on $\\underline{\\text{low}}$\n\n$\\mu$ Call $II$ and $III$ on $\\underline{\\text{low}}$",
+    "$\\nu$ Call $III$ on $\\underline{\\text{low}}$\n\n$\\xi$ Call $III$ and $I$ on $\\underline{\\text{low}}$",
+    "Player $III$ never gets a second move."
+  )
+)
+
+chap_8_tbl_1 |>
+  gt() |>
+  cols_label(
+    player = "",
+    first_moves = "First Moves",
+    second_moves = "Second Moves"
+  ) |>
+  fmt_markdown(columns = everything()) |>
+  cols_width(
+    player ~ px(50),
+    first_moves ~ pct(45),
+    second_moves ~ pct(45)
+  ) |>
+  tab_options(
+    column_labels.border.top.style = "solid",
+    column_labels.border.top.width = px(2),
+    column_labels.border.top.color = "black",
+    column_labels.border.bottom.style = "solid",
+    column_labels.border.bottom.width = px(2),
+    column_labels.border.bottom.color = "black",
+    table.border.bottom.style = "solid",
+    table.border.bottom.width = px(3),
+    table.border.bottom.color = "black"
+  )
+```
+
+We locate all possible equilibrium points by first showing that most of the greek parameters must vanish. By dominance mainly with a little contradiction-type analysis $\beta$ is eliminated and with it go $\gamma$, $\zeta$, and $\theta$ by dominance. Then contradictions eliminate $\mu$, $\epsilon$, $\iota$, $\lambda$, $\kappa$, and $\nu$ in that order. This leaves us with $\alpha$, $\delta$, $\epsilon$, and $\eta$. Contradiction analysis shows that none of these can be zero or one and thus we obtain a system of simultaneous algebraic equations. The equations happen to have but one solution with the variables in the range $(0,1)$. We get 
+
+$$
+\alpha = \frac{21 − \sqrt{321}}{10}, \eta = \frac{5\alpha + 1}{4}, \delta = \frac{5 − 2\alpha}{5 + \alpha}, \text{ and } \epsilon = \frac{4\alpha − 1}{\alpha + 5}.
+$$ 
+
+These yield $\alpha = 0.308$, $\eta = 0.635$, $\delta = 0.826$, and $\epsilon = 0.044$. Since there is only one equilibrium point the game has values; these
+are 
+
+$$
+v_1 = -0.147 = −\frac{(1 + 17\alpha)}{8(5 + \alpha)}, v_2 = −0.096 = −\frac{(1 − 2α)}{4},
+$$
+
+and
+
+$$
+v_3 = 0.243 = \frac{79}{40}\left( \frac{(1 − \alpha)}{5 + \alpha} \right).
+$$
+
+Investigations of the coalition powers yields the following "good strategies" and values for the various coalitions. Parameters not mentioned are zero (See @tbl-chapter-8-table-2, @tbl-chapter-8-table-3 and @tbl-chapter-8-table-4).
+
+```{r}
+#| label: tbl-chapter-8-table-2
+#| echo: false
+#| tbl-pos: "H"
+
+chap_8_tbl_2 <- tibble(
+  coalition_1 = c("$\\alpha = \\frac{3}{4}$", "$\\delta = \\epsilon = 1$"),
+  versus = "",
+  coalition_2 = c(
+    "$\\iota = \\frac{1}{4}, 0 \\le \\eta \\le \\frac{2}{3}$",
+    "value to $III : 0.03125 = \\frac{1}{32}$"
+  )
+)
+
+chap_8_tbl_2 |>
+  gt() |>
+  cols_label(
+    coalition_1 = md("$I$ and $II$"),
+    versus = "versus",
+    coalition_2 = md("$III$")
+  ) |>
+  fmt_markdown(columns = everything()) |>
+  tab_options(
+    column_labels.border.top.style = "solid",
+    column_labels.border.top.width = px(2),
+    column_labels.border.top.color = "black",
+    column_labels.border.bottom.style = "solid",
+    column_labels.border.bottom.width = px(2),
+    column_labels.border.bottom.color = "black",
+    table.border.bottom.style = "solid",
+    table.border.bottom.width = px(3),
+    table.border.bottom.color = "black"
+  )
+```
+
+```{r}
+#| label: tbl-chapter-8-table-3
+#| echo: false
+#| tbl-pos: "H"
+
+chap_8_tbl_3 <- tibble(
+  coalition_1 = c("$\\delta = 1, \\epsilon = 0$", "$\\alpha = \\frac{2}{3}$"),
+  versus = "",
+  coalition_2 = c(
+    "$\\eta = \\frac{2}{3}$",
+    "value to $I : -0.1887 = -\\frac{1}{6}$"
+  )
+)
+
+chap_8_tbl_3 |>
+  gt() |>
+  cols_label(
+    coalition_1 = md("$II$ and $III$"),
+    versus = "versus",
+    coalition_2 = md("$I$")
+  ) |>
+  fmt_markdown(columns = everything()) |>
+  tab_options(
+    column_labels.border.top.style = "solid",
+    column_labels.border.top.width = px(2),
+    column_labels.border.top.color = "black",
+    column_labels.border.bottom.style = "solid",
+    column_labels.border.bottom.width = px(2),
+    column_labels.border.bottom.color = "black",
+    table.border.bottom.style = "solid",
+    table.border.bottom.width = px(3),
+    table.border.bottom.color = "black"
+  )
+```
+
+```{r}
+#| label: tbl-chapter-8-table-4
+#| echo: false
+#| tbl-pos: "H"
+
+inner_left_upper_grid <- paste0(
+  "\\begin{array}{c|c} ",
+  "\\textnormal{high} & \\textnormal{low} \\\\ \\hline ",
+  "\\textnormal{bet}  & \\textnormal{pass} ",
+  "\\end{array}"
+)
+
+inner_left_lower_grid <- paste0(
+  "\\begin{array}{c|c}",
+  "\\textnormal{pass} & \\textnormal{pass}",
+  "\\end{array}"
+)
+
+left_grid <- paste0(
+  "$\\begin{array}{c||c||c} ",
+  inner_left_upper_grid,
+  " & \\cdots \\eta = 0 & \\frac{3}{11} \\\\ \\hline ",
+  inner_left_lower_grid,
+  " & \\cdots \\eta = \\frac{3}{16} & \\frac{8}{11} ",
+  "\\end{array}$"
+)
+
+chap_8_tbl_4 <- tibble(
+  coalition_1 = left_grid,
+  versus = "",
+  coalition_2 = "$\\delta = \\frac{7}{11}, \\epsilon = \\frac{3}{11}$\n\nvalue to $II : -0.1136 = -\\frac{5}{44}$"
+)
+
+chap_8_tbl_4 |>
+  gt() |>
+  cols_label(
+    coalition_1 = md("$I$ and $III$"),
+    versus = "versus",
+    coalition_2 = md("$II$")
+  ) |>
+  fmt_markdown(columns = everything()) |>
+  cols_width(
+    coalition_1 ~ pct(45),
+    versus ~ px(50),
+    coalition_2 ~ pct(45)
+  ) |>
+  tab_options(
+    column_labels.border.top.style = "solid",
+    column_labels.border.top.width = px(2),
+    column_labels.border.top.color = "black",
+    column_labels.border.bottom.style = "solid",
+    column_labels.border.bottom.width = px(2),
+    column_labels.border.bottom.color = "black",
+    table.border.bottom.style = "solid",
+    table.border.bottom.width = px(3),
+    table.border.bottom.color = "black"
+  )
+```
+
+The coalition members have the power to agree upon a pattern of play before the game is played. This advantage becomes significant only in the case of coalition $I$ $III$ where $III$ may open after two passes when $I$ had planned to pass on both [high]{.underline} and [low]{.underline} but will not open if $I$ had planned to bet if he got [high]{.underline}. The values given are, of course, what the single player assures himself with his "safe" strategy.
+
+A more detailed treatment of this game is being prepared for publication elsewhere. This will consider different relative sizes of ante and bet.
