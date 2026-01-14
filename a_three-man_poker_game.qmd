@@ -10,7 +10,7 @@ library(dplyr)
 
 As an example of the application of our theory to a more or less realistic case we include the simplified poker game given below. The rules are as follows:
 
-(1) The deck is large, with equally many high and low cards, and a hand consists of one card.
+(1) The deck is large, with equally many [high]{.underline} and [low]{.underline} cards, and a hand consists of one card.
 (2) Two chips are used to ante, open, or call.
 (3) The players play in rotation and the game ends after all have passed or after one player has opened and the others have had a chance to call.
 (4) If no one bets the antes are retrieved.
@@ -67,7 +67,7 @@ chap_8_tbl_1 |>
   )
 ```
 
-We locate all possible equilibrium points by first showing that most of the greek parameters must vanish. By dominance mainly with a little contradiction-type analysis $\beta$ is eliminated and with it go $\gamma$, $\zeta$, and $\theta$ by dominance. Then contradictions eliminate $\mu$, $\epsilon$, $\iota$, $\lambda$, $\kappa$, and $\nu$ in that order. This leaves us with $\alpha$, $\delta$, $\epsilon$, and $\eta$. Contradiction analysis shows that none of these can be zero or one and thus we obtain a system of simultaneous algebraic equations. The equations happen to have but one solution with the variables in the range $(0,1)$. We get 
+We locate all possible equilibrium points by first showing that most of the greek parameters must vanish. By dominance mainly with a little contradiction-type analysis $\beta$ is eliminated and with it go $\gamma$, $\zeta$ and $\theta$ by dominance. Then contradictions eliminate $\mu$, $\epsilon$, $\iota$, $\lambda$, $\kappa$, and $\nu$ in that order. This leaves us with $\alpha$, $\delta$, $\epsilon$, and $\eta$. Contradiction analysis shows that none of these can be zero or one and thus we obtain a system of simultaneous algebraic equations. The equations happen to have but one solution with the variables in the range $(0,1)$. We get 
 
 $$
 \alpha = \frac{21 − \sqrt{321}}{10}, \eta = \frac{5\alpha + 1}{4}, \delta = \frac{5 − 2\alpha}{5 + \alpha}, \text{ and } \epsilon = \frac{4\alpha − 1}{\alpha + 5}.
@@ -86,7 +86,7 @@ $$
 v_3 = 0.243 = \frac{79}{40}\left( \frac{(1 − \alpha)}{5 + \alpha} \right).
 $$
 
-Investigations of the coalition powers yields the following "good strategies" and values for the various coalitions. Parameters not mentioned are zero (See @tbl-chapter-8-table-2, @tbl-chapter-8-table-3 and @tbl-chapter-8-table-4).
+Investigation of the coalition powers yields the following "good strategies" and values for the various coalitions. Parameters not mentioned are zero (See @tbl-chapter-8-table-2, @tbl-chapter-8-table-3 and @tbl-chapter-8-table-4).
 
 ```{r}
 #| label: tbl-chapter-8-table-2
@@ -130,11 +130,11 @@ chap_8_tbl_2 |>
 #| tbl-pos: "H"
 
 chap_8_tbl_3 <- tibble(
-  coalition_1 = c("$\\delta = 1, \\epsilon = 0$", "$\\alpha = \\frac{2}{3}$"),
+  coalition_1 = c("$\\delta = 1, \\epsilon = 0$", "$\\eta = \\frac{2}{3}$"),
   versus = "",
   coalition_2 = c(
-    "$\\eta = \\frac{2}{3}$",
-    "value to $I : -0.1887 = -\\frac{1}{6}$"
+    "$\\alpha = \\frac{2}{3}$",
+    "value to $I : -0.1667 = -\\frac{1}{6}$"
   )
 )
 
@@ -183,7 +183,7 @@ left_grid <- paste0(
   inner_left_upper_grid,
   " & \\cdots \\eta = 0 & \\frac{3}{11} \\\\ \\hline ",
   inner_left_lower_grid,
-  " & \\cdots \\eta = \\frac{3}{16} & \\frac{8}{11} ",
+  " & \\cdots \\eta = \\frac{13}{16} & \\frac{8}{11} ",
   "\\end{array}$"
 )
 
