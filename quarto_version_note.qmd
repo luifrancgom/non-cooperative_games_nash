@@ -1,0 +1,13 @@
+# Quarto Version Note {.unnumbered .unlisted}
+
+This manuscript is a modernized re-edition of John Forbes Nash Jr.'s thesis, authored using [Quarto](https://quarto.org/) and based in part on the LaTeX code by [Simon Xiang](https://github.com/simonxiang1/nash_thesis). This version is available for free download from my [GitHub repository](https://github.com/luifrancgom/non-cooperative_games_nash). For more information, check out the `README.md` file in this repository.
+
+<!--
+Check
+https://github.com/orgs/quarto-dev/discussions/13178
+https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html#block-syntax
+-->
+
+::: {.flushright latex=""}
+Luis Francisco Gomez Lopez - 2026-01-14
+:::

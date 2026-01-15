@@ -4,8 +4,8 @@
 #| label: libraries
 #| include: false
 
+library(tibble)
 library(gt)
-library(dplyr)
 ```
 
 As an example of the application of our theory to a more or less realistic case we include the simplified poker game given below. The rules are as follows:

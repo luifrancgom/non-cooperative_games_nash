@@ -27,6 +27,7 @@ book:
     - applications.qmd
     - references.qmd
     - acknowledgements.qmd
+    - quarto_version_note.qmd
 
 format:
   html:

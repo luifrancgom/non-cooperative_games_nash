@@ -1,0 +1,93 @@
+---
+title: "Non-Cooperative Games (John Forbes Nash Thesis)"
+format: gfm
+bibliography: references/non-cooperative_games.bib
+csl: references/ieee.csl
+---
+
+This repository contains a modern re-edition of John Forbes Nash Jr.'s thesis, **Non-Cooperative Games**, authored using [Quarto](https://quarto.org/).
+
+The project is based in part on the LaTeX code by [Simon Xiang](https://github.com/simonxiang1/nash_thesis).
+
+The original manuscript is currently in the public domain and can be accessed via the [Princeton University Library](https://library.princeton.edu/); it is also included in the `facsimile` folder.
+
+The following additional sources were also consulted when creating the Quarto version (See @nash_non-cooperative_1951 and @nash_essential_2002): 
+
+### Sources
+
+::: {#refs}
+:::
+
+---
+
+## 📖 Read Online
+
+You can access the rendered versions of the thesis through the following links:
+
+| Format | Link |
+| :--- | :--- |
+| **🌐 HTML** | [View Web Version](https://luifrancgom.github.io/non-cooperative_games_nash/) |
+| **📄 PDF** | [Download PDF](https://luifrancgom.github.io/non-cooperative_games_nash/Non-Cooperative-Games.pdf) |
+
+---
+
+## 🛠 Build from Source
+
+To generate the thesis locally, ensure you have [Git](https://git-scm.com/), [R](https://cran.r-project.org/) version `4.5.2` or later and [Quarto](https://quarto.org/docs/download/) installed on your system.
+
+### Clone the Repository
+
+Open your terminal and run the following commands to download the code and enter the project folder:
+
+```bash
+git clone https://github.com/luifrancgom/non-cooperative_games_nash.git
+cd non-cooperative_games_nash
+```
+
+### Install Dependencies
+
+To render the PDF version, you need a LaTeX distribution. If you do not have one installed, Quarto can set up a lightweight version (TinyTeX) for you:
+
+```bash
+quarto install tinytex
+```
+Additionally, you must restore the R environment. Open R and run the following commands to install `renv` and synchronize the project dependencies:
+
+```r
+install.packages("renv")
+renv::restore()
+```
+Then, verify that the project environment is correctly synchronized:
+
+```r
+renv::status()
+```
+
+### Render the Book
+
+Once the dependencies are ready, you can render all formats (HTML and PDF) with a single command:
+
+```bash
+quarto render
+```
+### Accessing Intermediate Files
+
+By default, Quarto cleans up intermediate files after rendering. If you want to inspect the generated `.tex` (LaTeX) or `.md` (Markdown) source files, you must modify the `_quarto.yml` configuration file. 
+
+Uncomment (or add) the following options under the pdf format section:
+
+```yaml
+format:
+  pdf:
+    keep-md: true
+    keep-tex: true
+```
+After saving the changes to `_quarto.yml`, run `quarto render` again. The files will then remain in your project directory for you to access.
+
+## ⚖️ License and Attribution
+
+### Credits
+
+* **Original Text:** *Non-Cooperative Games* (1950) by **John Forbes Nash Jr.**. The original content is in the **Public Domain** and can be accessed via the [Princeton University Library](https://library.princeton.edu/).
+* **LaTeX Source & OCR:** This edition is based on the LaTeX code by [Simon Xiang](https://github.com/simonxiang1/nash_thesis) and [Luis Francisco Gomez Lopez](https://github.com/luifrancgom/non-cooperative_games_nash) 
+* **Quarto Conversion:** Modernized and converted to Quarto by [Luis Francisco Gomez Lopez](https://github.com/luifrancgom/non-cooperative_games_nash).
