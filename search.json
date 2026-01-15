@@ -188,5 +188,15 @@
     "crumbs": [
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Acknowledgements</span>"
     ]
+  },
+  {
+    "objectID": "quarto_version_note.html",
+    "href": "quarto_version_note.html",
+    "title": "Quarto Version Note",
+    "section": "",
+    "text": "This manuscript is a modernized re-edition of John Forbes Nash Jr.’s thesis, authored using Quarto and based in part on the LaTeX code by Simon Xiang. This version is available for free download from my GitHub repository. For more information, check out the README.md file in this repository.\n\n\nLuis Francisco Gomez Lopez - 2026-01-14",
+    "crumbs": [
+      "Quarto Version Note"
+    ]
   }
 ]
