@@ -122,7 +122,7 @@ format:
 After saving the changes to `_quarto.yml`, run `quarto render` again.
 The files will then remain in your project directory for you to access.
 
-## ⚖️ License and Attribution
+## ⚖️ Attribution
 
 ### Credits
 
